@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1D3FE8D1FA9BA1400A1DED7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FE8C1FA9BA1400A1DED7 /* AppDelegate.m */; };
-		F1D3FE901FA9BA1400A1DED7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FE8F1FA9BA1400A1DED7 /* ViewController.m */; };
 		F1D3FE931FA9BA1400A1DED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */; };
 		F1D3FE951FA9BA1400A1DED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */; };
 		F1D3FE981FA9BA1400A1DED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE961FA9BA1400A1DED7 /* LaunchScreen.storyboard */; };
 		F1D3FE9B1FA9BA1400A1DED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FE9A1FA9BA1400A1DED7 /* main.m */; };
 		F1D3FEA51FA9BA1400A1DED7 /* WPMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEA41FA9BA1400A1DED7 /* WPMTests.m */; };
 		F1D3FEB01FA9BA1400A1DED7 /* WPMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEAF1FA9BA1400A1DED7 /* WPMUITests.m */; };
+		F1D3FF051FA9BAA200A1DED7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */; };
+		F1D3FF061FA9BAA200A1DED7 /* WPMAlbumSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */; };
+		F1D3FF071FA9BAA200A1DED7 /* WPMCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC51FA9BAA100A1DED7 /* WPMCalendarVC.m */; };
+		F1D3FF081FA9BAA200A1DED7 /* WPMPushAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC71FA9BAA100A1DED7 /* WPMPushAlbumController.m */; };
+		F1D3FF091FA9BAA200A1DED7 /* WPMPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC91FA9BAA100A1DED7 /* WPMPushController.m */; };
+		F1D3FF0A1FA9BAA200A1DED7 /* NSDate+WPMCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FECC1FA9BAA100A1DED7 /* NSDate+WPMCalendar.m */; };
+		F1D3FF0B1FA9BAA200A1DED7 /* WPMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FECE1FA9BAA100A1DED7 /* WPMAlbum.m */; };
+		F1D3FF0C1FA9BAA200A1DED7 /* WPMAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FED01FA9BAA100A1DED7 /* WPMAlbumModel.m */; };
+		F1D3FF0D1FA9BAA200A1DED7 /* WPMCalendarMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FED21FA9BAA100A1DED7 /* WPMCalendarMonth.m */; };
+		F1D3FF0E1FA9BAA200A1DED7 /* WPMAlbumTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FED51FA9BAA100A1DED7 /* WPMAlbumTVCell.m */; };
+		F1D3FF0F1FA9BAA200A1DED7 /* WPMCalenarWeekHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FED71FA9BAA100A1DED7 /* WPMCalenarWeekHeaderView.m */; };
+		F1D3FF101FA9BAA200A1DED7 /* WPMCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FED91FA9BAA100A1DED7 /* WPMCalendarCell.m */; };
+		F1D3FF111FA9BAA200A1DED7 /* WPMCalendarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEDB1FA9BAA100A1DED7 /* WPMCalendarScrollView.m */; };
+		F1D3FF121FA9BAA200A1DED7 /* WPMCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEDD1FA9BAA100A1DED7 /* WPMCalendarView.m */; };
+		F1D3FF131FA9BAA200A1DED7 /* WPMForHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEDF1FA9BAA100A1DED7 /* WPMForHeaderView.m */; };
+		F1D3FF141FA9BAA200A1DED7 /* WPMSingleWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEE11FA9BAA100A1DED7 /* WPMSingleWeekView.m */; };
+		F1D3FF151FA9BAA200A1DED7 /* WPMCoffeeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEE51FA9BAA100A1DED7 /* WPMCoffeeVC.m */; };
+		F1D3FF161FA9BAA200A1DED7 /* WPMHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEEB1FA9BAA100A1DED7 /* WPMHomeVC.m */; };
+		F1D3FF171FA9BAA200A1DED7 /* WPMSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEF11FA9BAA100A1DED7 /* WPMSettingVC.m */; };
+		F1D3FF181FA9BAA200A1DED7 /* WPMSettingBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEF51FA9BAA100A1DED7 /* WPMSettingBtnView.m */; };
+		F1D3FF191FA9BAA200A1DED7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEF81FA9BAA100A1DED7 /* AppDelegate.m */; };
+		F1D3FF1A1FA9BAA200A1DED7 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEFF1FA9BAA100A1DED7 /* BaseNavigationController.m */; };
+		F1D3FF1B1FA9BAA200A1DED7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FF011FA9BAA100A1DED7 /* BaseViewController.m */; };
+		F1D3FF1C1FA9BAA200A1DED7 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FF031FA9BAA100A1DED7 /* MainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +58,6 @@
 
 /* Begin PBXFileReference section */
 		F1D3FE881FA9BA1400A1DED7 /* WPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1D3FE8B1FA9BA1400A1DED7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F1D3FE8C1FA9BA1400A1DED7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1D3FE8E1FA9BA1400A1DED7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F1D3FE8F1FA9BA1400A1DED7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F1D3FE921FA9BA1400A1DED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1D3FE971FA9BA1400A1DED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +69,55 @@
 		F1D3FEAB1FA9BA1400A1DED7 /* WPMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WPMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D3FEAF1FA9BA1400A1DED7 /* WPMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPMUITests.m; sourceTree = "<group>"; };
 		F1D3FEB11FA9BA1400A1DED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1D3FEC01FA9BAA100A1DED7 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		F1D3FEC21FA9BAA100A1DED7 /* WPMAlbumSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMAlbumSearchVC.h; sourceTree = "<group>"; };
+		F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMAlbumSearchVC.m; sourceTree = "<group>"; };
+		F1D3FEC41FA9BAA100A1DED7 /* WPMCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarVC.h; sourceTree = "<group>"; };
+		F1D3FEC51FA9BAA100A1DED7 /* WPMCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarVC.m; sourceTree = "<group>"; };
+		F1D3FEC61FA9BAA100A1DED7 /* WPMPushAlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMPushAlbumController.h; sourceTree = "<group>"; };
+		F1D3FEC71FA9BAA100A1DED7 /* WPMPushAlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMPushAlbumController.m; sourceTree = "<group>"; };
+		F1D3FEC81FA9BAA100A1DED7 /* WPMPushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMPushController.h; sourceTree = "<group>"; };
+		F1D3FEC91FA9BAA100A1DED7 /* WPMPushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMPushController.m; sourceTree = "<group>"; };
+		F1D3FECB1FA9BAA100A1DED7 /* NSDate+WPMCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WPMCalendar.h"; sourceTree = "<group>"; };
+		F1D3FECC1FA9BAA100A1DED7 /* NSDate+WPMCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WPMCalendar.m"; sourceTree = "<group>"; };
+		F1D3FECD1FA9BAA100A1DED7 /* WPMAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMAlbum.h; sourceTree = "<group>"; };
+		F1D3FECE1FA9BAA100A1DED7 /* WPMAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMAlbum.m; sourceTree = "<group>"; };
+		F1D3FECF1FA9BAA100A1DED7 /* WPMAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMAlbumModel.h; sourceTree = "<group>"; };
+		F1D3FED01FA9BAA100A1DED7 /* WPMAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMAlbumModel.m; sourceTree = "<group>"; };
+		F1D3FED11FA9BAA100A1DED7 /* WPMCalendarMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarMonth.h; sourceTree = "<group>"; };
+		F1D3FED21FA9BAA100A1DED7 /* WPMCalendarMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarMonth.m; sourceTree = "<group>"; };
+		F1D3FED41FA9BAA100A1DED7 /* WPMAlbumTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMAlbumTVCell.h; sourceTree = "<group>"; };
+		F1D3FED51FA9BAA100A1DED7 /* WPMAlbumTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMAlbumTVCell.m; sourceTree = "<group>"; };
+		F1D3FED61FA9BAA100A1DED7 /* WPMCalenarWeekHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalenarWeekHeaderView.h; sourceTree = "<group>"; };
+		F1D3FED71FA9BAA100A1DED7 /* WPMCalenarWeekHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalenarWeekHeaderView.m; sourceTree = "<group>"; };
+		F1D3FED81FA9BAA100A1DED7 /* WPMCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarCell.h; sourceTree = "<group>"; };
+		F1D3FED91FA9BAA100A1DED7 /* WPMCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarCell.m; sourceTree = "<group>"; };
+		F1D3FEDA1FA9BAA100A1DED7 /* WPMCalendarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarScrollView.h; sourceTree = "<group>"; };
+		F1D3FEDB1FA9BAA100A1DED7 /* WPMCalendarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarScrollView.m; sourceTree = "<group>"; };
+		F1D3FEDC1FA9BAA100A1DED7 /* WPMCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarView.h; sourceTree = "<group>"; };
+		F1D3FEDD1FA9BAA100A1DED7 /* WPMCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarView.m; sourceTree = "<group>"; };
+		F1D3FEDE1FA9BAA100A1DED7 /* WPMForHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMForHeaderView.h; sourceTree = "<group>"; };
+		F1D3FEDF1FA9BAA100A1DED7 /* WPMForHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMForHeaderView.m; sourceTree = "<group>"; };
+		F1D3FEE01FA9BAA100A1DED7 /* WPMSingleWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMSingleWeekView.h; sourceTree = "<group>"; };
+		F1D3FEE11FA9BAA100A1DED7 /* WPMSingleWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMSingleWeekView.m; sourceTree = "<group>"; };
+		F1D3FEE41FA9BAA100A1DED7 /* WPMCoffeeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCoffeeVC.h; sourceTree = "<group>"; };
+		F1D3FEE51FA9BAA100A1DED7 /* WPMCoffeeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMCoffeeVC.m; sourceTree = "<group>"; };
+		F1D3FEEA1FA9BAA100A1DED7 /* WPMHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMHomeVC.h; sourceTree = "<group>"; };
+		F1D3FEEB1FA9BAA100A1DED7 /* WPMHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMHomeVC.m; sourceTree = "<group>"; };
+		F1D3FEF01FA9BAA100A1DED7 /* WPMSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMSettingVC.h; sourceTree = "<group>"; };
+		F1D3FEF11FA9BAA100A1DED7 /* WPMSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMSettingVC.m; sourceTree = "<group>"; };
+		F1D3FEF41FA9BAA100A1DED7 /* WPMSettingBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMSettingBtnView.h; sourceTree = "<group>"; };
+		F1D3FEF51FA9BAA100A1DED7 /* WPMSettingBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMSettingBtnView.m; sourceTree = "<group>"; };
+		F1D3FEF71FA9BAA100A1DED7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1D3FEF81FA9BAA100A1DED7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1D3FEFA1FA9BAA100A1DED7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F1D3FEFE1FA9BAA100A1DED7 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		F1D3FEFF1FA9BAA100A1DED7 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		F1D3FF001FA9BAA100A1DED7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		F1D3FF011FA9BAA100A1DED7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F1D3FF021FA9BAA100A1DED7 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		F1D3FF031FA9BAA100A1DED7 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +168,12 @@
 		F1D3FE8A1FA9BA1400A1DED7 /* WPM */ = {
 			isa = PBXGroup;
 			children = (
-				F1D3FE8B1FA9BA1400A1DED7 /* AppDelegate.h */,
-				F1D3FE8C1FA9BA1400A1DED7 /* AppDelegate.m */,
-				F1D3FE8E1FA9BA1400A1DED7 /* ViewController.h */,
-				F1D3FE8F1FA9BA1400A1DED7 /* ViewController.m */,
-				F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */,
+				F1D3FEF61FA9BAA100A1DED7 /* AppDelegate */,
+				F1D3FEBD1FA9BAA100A1DED7 /* Class */,
+				F1D3FEFB1FA9BAA100A1DED7 /* Common */,
+				F1D3FEF91FA9BAA100A1DED7 /* Config */,
 				F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */,
+				F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */,
 				F1D3FE961FA9BA1400A1DED7 /* LaunchScreen.storyboard */,
 				F1D3FE991FA9BA1400A1DED7 /* Info.plist */,
 				F1D3FE9A1FA9BA1400A1DED7 /* main.m */,
@@ -130,6 +197,235 @@
 				F1D3FEB11FA9BA1400A1DED7 /* Info.plist */,
 			);
 			path = WPMUITests;
+			sourceTree = "<group>";
+		};
+		F1D3FEBD1FA9BAA100A1DED7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEBE1FA9BAA100A1DED7 /* Calendar */,
+				F1D3FEE21FA9BAA100A1DED7 /* Coffee */,
+				F1D3FEE81FA9BAA100A1DED7 /* Home */,
+				F1D3FEEE1FA9BAA100A1DED7 /* Setting */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F1D3FEBE1FA9BAA100A1DED7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEBF1FA9BAA100A1DED7 /* Controller */,
+				F1D3FECA1FA9BAA100A1DED7 /* Model */,
+				F1D3FED31FA9BAA100A1DED7 /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F1D3FEBF1FA9BAA100A1DED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEC01FA9BAA100A1DED7 /* CollectionViewController.h */,
+				F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */,
+				F1D3FEC21FA9BAA100A1DED7 /* WPMAlbumSearchVC.h */,
+				F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */,
+				F1D3FEC41FA9BAA100A1DED7 /* WPMCalendarVC.h */,
+				F1D3FEC51FA9BAA100A1DED7 /* WPMCalendarVC.m */,
+				F1D3FEC61FA9BAA100A1DED7 /* WPMPushAlbumController.h */,
+				F1D3FEC71FA9BAA100A1DED7 /* WPMPushAlbumController.m */,
+				F1D3FEC81FA9BAA100A1DED7 /* WPMPushController.h */,
+				F1D3FEC91FA9BAA100A1DED7 /* WPMPushController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1D3FECA1FA9BAA100A1DED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FECB1FA9BAA100A1DED7 /* NSDate+WPMCalendar.h */,
+				F1D3FECC1FA9BAA100A1DED7 /* NSDate+WPMCalendar.m */,
+				F1D3FECD1FA9BAA100A1DED7 /* WPMAlbum.h */,
+				F1D3FECE1FA9BAA100A1DED7 /* WPMAlbum.m */,
+				F1D3FECF1FA9BAA100A1DED7 /* WPMAlbumModel.h */,
+				F1D3FED01FA9BAA100A1DED7 /* WPMAlbumModel.m */,
+				F1D3FED11FA9BAA100A1DED7 /* WPMCalendarMonth.h */,
+				F1D3FED21FA9BAA100A1DED7 /* WPMCalendarMonth.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1D3FED31FA9BAA100A1DED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FED41FA9BAA100A1DED7 /* WPMAlbumTVCell.h */,
+				F1D3FED51FA9BAA100A1DED7 /* WPMAlbumTVCell.m */,
+				F1D3FED61FA9BAA100A1DED7 /* WPMCalenarWeekHeaderView.h */,
+				F1D3FED71FA9BAA100A1DED7 /* WPMCalenarWeekHeaderView.m */,
+				F1D3FED81FA9BAA100A1DED7 /* WPMCalendarCell.h */,
+				F1D3FED91FA9BAA100A1DED7 /* WPMCalendarCell.m */,
+				F1D3FEDA1FA9BAA100A1DED7 /* WPMCalendarScrollView.h */,
+				F1D3FEDB1FA9BAA100A1DED7 /* WPMCalendarScrollView.m */,
+				F1D3FEDC1FA9BAA100A1DED7 /* WPMCalendarView.h */,
+				F1D3FEDD1FA9BAA100A1DED7 /* WPMCalendarView.m */,
+				F1D3FEDE1FA9BAA100A1DED7 /* WPMForHeaderView.h */,
+				F1D3FEDF1FA9BAA100A1DED7 /* WPMForHeaderView.m */,
+				F1D3FEE01FA9BAA100A1DED7 /* WPMSingleWeekView.h */,
+				F1D3FEE11FA9BAA100A1DED7 /* WPMSingleWeekView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1D3FEE21FA9BAA100A1DED7 /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEE31FA9BAA100A1DED7 /* Controller */,
+				F1D3FEE61FA9BAA100A1DED7 /* Model */,
+				F1D3FEE71FA9BAA100A1DED7 /* View */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		F1D3FEE31FA9BAA100A1DED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEE41FA9BAA100A1DED7 /* WPMCoffeeVC.h */,
+				F1D3FEE51FA9BAA100A1DED7 /* WPMCoffeeVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1D3FEE61FA9BAA100A1DED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1D3FEE71FA9BAA100A1DED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1D3FEE81FA9BAA100A1DED7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEE91FA9BAA100A1DED7 /* Controller */,
+				F1D3FEEC1FA9BAA100A1DED7 /* Model */,
+				F1D3FEED1FA9BAA100A1DED7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F1D3FEE91FA9BAA100A1DED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEEA1FA9BAA100A1DED7 /* WPMHomeVC.h */,
+				F1D3FEEB1FA9BAA100A1DED7 /* WPMHomeVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1D3FEEC1FA9BAA100A1DED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1D3FEED1FA9BAA100A1DED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1D3FEEE1FA9BAA100A1DED7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEEF1FA9BAA100A1DED7 /* Controller */,
+				F1D3FEF21FA9BAA100A1DED7 /* Model */,
+				F1D3FEF31FA9BAA100A1DED7 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		F1D3FEEF1FA9BAA100A1DED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEF01FA9BAA100A1DED7 /* WPMSettingVC.h */,
+				F1D3FEF11FA9BAA100A1DED7 /* WPMSettingVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1D3FEF21FA9BAA100A1DED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1D3FEF31FA9BAA100A1DED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEF41FA9BAA100A1DED7 /* WPMSettingBtnView.h */,
+				F1D3FEF51FA9BAA100A1DED7 /* WPMSettingBtnView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1D3FEF61FA9BAA100A1DED7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEF71FA9BAA100A1DED7 /* AppDelegate.h */,
+				F1D3FEF81FA9BAA100A1DED7 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F1D3FEF91FA9BAA100A1DED7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEFA1FA9BAA100A1DED7 /* PrefixHeader.pch */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F1D3FEFB1FA9BAA100A1DED7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEFC1FA9BAA100A1DED7 /* BaseClass */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F1D3FEFC1FA9BAA100A1DED7 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEFD1FA9BAA100A1DED7 /* Controller */,
+				F1D3FF041FA9BAA100A1DED7 /* View */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		F1D3FEFD1FA9BAA100A1DED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D3FEFE1FA9BAA100A1DED7 /* BaseNavigationController.h */,
+				F1D3FEFF1FA9BAA100A1DED7 /* BaseNavigationController.m */,
+				F1D3FF001FA9BAA100A1DED7 /* BaseViewController.h */,
+				F1D3FF011FA9BAA100A1DED7 /* BaseViewController.m */,
+				F1D3FF021FA9BAA100A1DED7 /* MainTabBarController.h */,
+				F1D3FF031FA9BAA100A1DED7 /* MainTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1D3FF041FA9BAA100A1DED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +561,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1D3FE901FA9BA1400A1DED7 /* ViewController.m in Sources */,
+				F1D3FF191FA9BAA200A1DED7 /* AppDelegate.m in Sources */,
+				F1D3FF1B1FA9BAA200A1DED7 /* BaseViewController.m in Sources */,
+				F1D3FF171FA9BAA200A1DED7 /* WPMSettingVC.m in Sources */,
+				F1D3FF111FA9BAA200A1DED7 /* WPMCalendarScrollView.m in Sources */,
+				F1D3FF0A1FA9BAA200A1DED7 /* NSDate+WPMCalendar.m in Sources */,
+				F1D3FF081FA9BAA200A1DED7 /* WPMPushAlbumController.m in Sources */,
+				F1D3FF0B1FA9BAA200A1DED7 /* WPMAlbum.m in Sources */,
+				F1D3FF051FA9BAA200A1DED7 /* CollectionViewController.m in Sources */,
+				F1D3FF0E1FA9BAA200A1DED7 /* WPMAlbumTVCell.m in Sources */,
+				F1D3FF071FA9BAA200A1DED7 /* WPMCalendarVC.m in Sources */,
+				F1D3FF101FA9BAA200A1DED7 /* WPMCalendarCell.m in Sources */,
+				F1D3FF1C1FA9BAA200A1DED7 /* MainTabBarController.m in Sources */,
+				F1D3FF0C1FA9BAA200A1DED7 /* WPMAlbumModel.m in Sources */,
+				F1D3FF151FA9BAA200A1DED7 /* WPMCoffeeVC.m in Sources */,
+				F1D3FF141FA9BAA200A1DED7 /* WPMSingleWeekView.m in Sources */,
+				F1D3FF161FA9BAA200A1DED7 /* WPMHomeVC.m in Sources */,
+				F1D3FF0F1FA9BAA200A1DED7 /* WPMCalenarWeekHeaderView.m in Sources */,
 				F1D3FE9B1FA9BA1400A1DED7 /* main.m in Sources */,
-				F1D3FE8D1FA9BA1400A1DED7 /* AppDelegate.m in Sources */,
+				F1D3FF121FA9BAA200A1DED7 /* WPMCalendarView.m in Sources */,
+				F1D3FF131FA9BAA200A1DED7 /* WPMForHeaderView.m in Sources */,
+				F1D3FF181FA9BAA200A1DED7 /* WPMSettingBtnView.m in Sources */,
+				F1D3FF091FA9BAA200A1DED7 /* WPMPushController.m in Sources */,
+				F1D3FF061FA9BAA200A1DED7 /* WPMAlbumSearchVC.m in Sources */,
+				F1D3FF1A1FA9BAA200A1DED7 /* BaseNavigationController.m in Sources */,
+				F1D3FF0D1FA9BAA200A1DED7 /* WPMCalendarMonth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +748,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H78E9ECM8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WPM/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = WPM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dream.WPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,9 +765,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H78E9ECM8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WPM/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = WPM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dream.WPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

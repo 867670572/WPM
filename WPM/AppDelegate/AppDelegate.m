@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  WPM
 //
-//  Created by Dream on 2017/11/1.
-//  Copyright © 2017年 Dream. All rights reserved.
+//  Created by 纬线 on 2017/10/24.
+//  Copyright © 2017年 linfun. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +17,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self initRootVC];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
+#pragma mark - initRootVC
+
+- (void)initRootVC{
+    
+    self.rootViewController = [[MainTabBarController alloc]init];
+    self.window.rootViewController = self.rootViewController;
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
