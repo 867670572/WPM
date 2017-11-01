@@ -32,8 +32,8 @@
     [super viewDidLoad];
     UIImage *image = [UIImage imageNamed: @"logo"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage: image];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.navigationItem.titleView = imageView;
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     if (self.canShowNavBackItem) {
         [self setNavBackButtonItem];
     }

@@ -21,10 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+   
     [self setupUI];
 }
 - (void)setupUI{
+    //系统编辑按钮
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _albumModel = [[WPMAlbumModel alloc] init];
     _searchTF = [[UITextField alloc]initWithFrame:CGRectMake(10, 64, SCREEN_WIDTH - 70, 30)];
     _searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -146,9 +148,16 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [_searchTF resignFirstResponder];
 }
-//
+//点击tableview收起键盘
 - (void) hideKeyboard {
     [_searchTF resignFirstResponder];
+}
+
+//点击编辑按钮执行
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    [super setEditing:editing animated:animated];
+    //开启tab编辑
+    [_tabAlbum setEditing:editing animated:animated];
 }
 
 @end

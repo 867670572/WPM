@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    
     [self setupUI];
 }
 - (void)didReceiveMemoryWarning {
@@ -38,6 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)setupUI{
+    //系统编辑按钮
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _tabAlbum = [[UITableView alloc] initWithFrame:CGRectMake(0, 174,SCREEN_WIDTH,SCREEN_HEIGHT - 110-64) style:UITableViewStylePlain];
     _tabAlbum.delegate = self;
     _tabAlbum.dataSource = self;
@@ -46,8 +48,7 @@
     _headerView.hWDMY.text = self.weekDayMonthYear;
     
     _PAC = [[WPMPushAlbumController alloc] init];
-    //系统编辑按钮
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     arr = @[@"Strong",@"Strong",@"Strong",@"Normal",@"Light",@"Normal",@"Light",@"Light"];
     [self.view addSubview:_headerView];
     [self.view addSubview:_tabAlbum];
@@ -64,7 +65,7 @@
     //取消显示分割线
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    cell.backgroundColor = [UIColor colorWithWhite:1  alpha:0.1];
+    cell.backgroundColor = [UIColor clearColor];
     cell.IDLabel.text = [NSString stringWithFormat:@"%ld\n\n",indexPath.row + 1];;
     cell.IDLabel.backgroundColor = [UIColor redColor];
     cell.IDLabel.textAlignment = NSTextAlignmentCenter;
@@ -79,6 +80,8 @@
     cell.dateLabel.textAlignment = NSTextAlignmentRight;
     cell.dateLabel.textColor = [UIColor whiteColor];
     return cell;
+    
+ 
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return arr.count;

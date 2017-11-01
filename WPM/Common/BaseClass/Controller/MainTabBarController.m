@@ -24,12 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
+//    [[UITabBar appearance] setBackgroundColor:[UIColor blackColor]];
     [self loadViewControllers];
     
 }
 
 - (void)loadViewControllers{
+    
+    self.tabBar.tintColor=[UIColor greenColor];
     
     WPMHomeVC *HomeVC = [[WPMHomeVC alloc]init];
 //    CGFloat offset = 5.0;
@@ -60,28 +62,27 @@
     UITabBarItem *item3 = [tabbar.items objectAtIndex:2];
     UITabBarItem *item4 = [tabbar.items objectAtIndex:3];
 
-    item1.selectedImage = [[UIImage imageNamed:@"首页选中"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
     item1.image = [[UIImage imageNamed:@"home icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    //拉伸item的图片
-//    item1.imageInsets = UIEdgeInsetsMake(-6, 0, 6, 0);
+    item1.imageInsets = UIEdgeInsetsMake(0, 0, -8, 0);
 //    //调整item文字位置
 //    [item1 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item1.title = @"首页";
 
-    item2.selectedImage = [[UIImage imageNamed:@"购物车满选中"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item2.image = [[UIImage imageNamed:@"calendar icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    item2.imageInsets = UIEdgeInsetsMake(-6, 0, 6, 0);
+    item2.imageInsets = UIEdgeInsetsMake(0, 0, -15, 0);
 //    [item2 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item2.title = @"日记";
 
-    item3.selectedImage = [[UIImage imageNamed:@"选中订单"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
     item3.image = [[UIImage imageNamed:@"coffee icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    item3.imageInsets = UIEdgeInsetsMake(-6, 0, 6, 0);
+    item3.imageInsets = UIEdgeInsetsMake(0, 0, -8, 0);
 //    [item3 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item3.title = @"咖啡";
 
     item4.image = [[UIImage imageNamed:@"setting icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    item4.imageInsets = UIEdgeInsetsMake(-6, 0, 6, 0);
+    item4.imageInsets = UIEdgeInsetsMake(0, 0, -10, 0);
 //    [item4 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item4.title = @"设置";
 
@@ -94,9 +95,9 @@
     NSDictionary *selectedItem = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14 weight:2.0f],NSFontAttributeName,WPMMainColor,NSForegroundColorAttributeName, nil];
     [[UITabBarItem appearance] setTitleTextAttributes:selectedItem forState:UIControlStateSelected];
 
-//    UIView *bgView = [[UIView alloc]initWithFrame:self.tabBar.bounds];
-//    bgView.backgroundColor = [UIColor ];
-//    [self.tabBar insertSubview:bgView atIndex:0];
+    UIView *bgView = [[UIView alloc]initWithFrame:self.tabBar.bounds];
+    bgView.backgroundColor = [UIColor clearColor];
+    [self.tabBar insertSubview:bgView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
