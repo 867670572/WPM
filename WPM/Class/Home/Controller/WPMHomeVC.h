@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
-@interface WPMHomeVC : BaseViewController
-
+#import "SelectView.h"
+@interface WPMHomeVC : UIViewController
+@property(nonatomic,strong)SelectView *sv;
+@property(nonatomic,strong)UIButton *selectBtn;
 @end

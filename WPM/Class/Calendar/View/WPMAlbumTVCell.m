@@ -14,20 +14,23 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.backgroundColor = [UIColor colorWithWhite:1  alpha:0.1];
-        _IDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 25, 85)];
-        [self.contentView addSubview:_IDLabel];
-        _photoIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, 0, 200, 85)];
-        [self.contentView addSubview:_photoIV];
-        _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 120, 10, 90, 18)];
-        [self addSubview:_dateLabel];
-        _statusLabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 90, 45, 60, 20)];
-        [self addSubview:_statusLabel];
-        
-        
+        [self setupCell];
     }
     return self;
 }
+- (void)setupCell{
+    self.contentView.backgroundColor = [UIColor colorWithWhite:1  alpha:0.1];
+    _IDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/12, 85)];
+    [self.contentView addSubview:_IDLabel];
+    _photoIV = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/12, 0, SCREEN_WIDTH/2.3, 85)];
+    [self.contentView addSubview:_photoIV];
+    _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 120, 10, 90, 18)];
+    [self addSubview:_dateLabel];
+    _statusLabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 90, 45, 60, 20)];
+    [self addSubview:_statusLabel];
+    _IDLabel.backgroundColor = [UIColor redColor];
+}
+
 - (void)setFrame:(CGRect)frame{
     frame.origin.x += 10;
     frame.origin.y += 15;

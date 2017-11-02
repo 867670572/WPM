@@ -15,7 +15,7 @@
 @interface WPMPushController ()<UITableViewDelegate,UITableViewDataSource>
 {
     //测试数据
-    NSArray *arr;
+    NSMutableArray *arr;
 }
 @property (nonatomic,strong) UITableView *tabAlbum;
 @property (nonatomic,strong) WPMForHeaderView *headerView;
@@ -40,7 +40,7 @@
 - (void)setupUI{
     //系统编辑按钮
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _tabAlbum = [[UITableView alloc] initWithFrame:CGRectMake(0, 174,SCREEN_WIDTH,SCREEN_HEIGHT - 110-64) style:UITableViewStylePlain];
+    _tabAlbum = [[UITableView alloc] initWithFrame:CGRectMake(0, 174,SCREEN_WIDTH,SCREEN_HEIGHT - 110 - 64) style:UITableViewStylePlain];
     _tabAlbum.delegate = self;
     _tabAlbum.dataSource = self;
     _tabAlbum.backgroundColor = [UIColor clearColor];
@@ -48,15 +48,26 @@
     _headerView.hWDMY.text = self.weekDayMonthYear;
     
     _PAC = [[WPMPushAlbumController alloc] init];
-    
-    arr = @[@"Strong",@"Strong",@"Strong",@"Normal",@"Light",@"Normal",@"Light",@"Light"];
+    arr = [NSMutableArray array];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
+    [arr addObject:@"Strong"];
     [self.view addSubview:_headerView];
     [self.view addSubview:_tabAlbum];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"cell";
     WPMAlbumTVCell *cell = [_tabAlbum dequeueReusableCellWithIdentifier:identifier];
-
+    
     if (cell == nil) {
         cell = [[WPMAlbumTVCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
@@ -67,7 +78,7 @@
     
     cell.backgroundColor = [UIColor clearColor];
     cell.IDLabel.text = [NSString stringWithFormat:@"%ld\n\n",indexPath.row + 1];;
-    cell.IDLabel.backgroundColor = [UIColor redColor];
+    
     cell.IDLabel.textAlignment = NSTextAlignmentCenter;
     cell.IDLabel.numberOfLines = 3;
     cell.IDLabel.textColor = [UIColor whiteColor];
@@ -107,6 +118,25 @@
     [_tabAlbum setEditing:editing animated:animated];
 }
 
-
+- (void)tableView :(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    /**   点击 删除 按钮的操作 */
+    if (editingStyle==UITableViewCellEditingStyleDelete) {
+        
+        //        获取选中删除行索引值
+        
+        NSInteger row = [indexPath row];
+        
+        //        通过获取的索引值删除数组中的值
+        
+        [arr removeObjectAtIndex:row];
+        
+        //        删除单元格的某一行时，在用动画效果实现删除过程
+        
+        [_tabAlbum deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+       
+    }
+    
+}
 @end
 

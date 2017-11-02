@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "WPMSettingPushSettingVC.h"
 @interface WPMSettingVC : BaseViewController
 @property(nonatomic,strong)UIImageView *imgView;
 @property(nonatomic,strong)UILabel *label;

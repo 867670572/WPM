@@ -44,7 +44,7 @@
         pvc.titles = [NSString stringWithFormat:@"%ld/%ld/%ld", day, month, year];
         NSString *monthStr = [NSString stringWithFormat:@"%ld",month];
         
-        pvc.weekDayMonthYear = [NSString stringWithFormat:@"%@\t%ld\t%@\t%ld",weekday,day,[WPMCalendarView changeM:monthStr],year];
+        pvc.weekDayMonthYear = [NSString stringWithFormat:@"%@  %ld  %@  %ld",weekday,day,[WPMCalendarView changeM:monthStr],year];
 
         [self.navigationController pushViewController:pvc animated:YES];
     };

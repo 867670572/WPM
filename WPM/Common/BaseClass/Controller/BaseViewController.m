@@ -89,7 +89,7 @@
     
     
     self.navigationItem.leftBarButtonItem = nil;
-        self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = YES;
     self.navigationController.navigationItem.hidesBackButton = YES;
     self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.backBtn.frame = CGRectMake(0, 0, 15, 26);

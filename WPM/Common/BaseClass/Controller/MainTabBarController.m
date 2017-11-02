@@ -24,19 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [[UITabBar appearance] setBackgroundColor:[UIColor blackColor]];
+//    [[UITabBar appearance] setBackgroundColor:[UIColor greenColor]];
     [self loadViewControllers];
     
 }
 
 - (void)loadViewControllers{
     
-    self.tabBar.tintColor=[UIColor greenColor];
-    
     WPMHomeVC *HomeVC = [[WPMHomeVC alloc]init];
 //    CGFloat offset = 5.0;
 //    HomeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
-    [HomeVC setCanShowNavBackItem:NO];
+//    [HomeVC setCanShowNavBackItem:NO];
     BaseNavigationController *nav1 = [[BaseNavigationController alloc]initWithRootViewController:HomeVC];
 
     WPMCalendarVC *CallendarVC = [[WPMCalendarVC alloc]init];
@@ -96,7 +94,7 @@
     [[UITabBarItem appearance] setTitleTextAttributes:selectedItem forState:UIControlStateSelected];
 
     UIView *bgView = [[UIView alloc]initWithFrame:self.tabBar.bounds];
-    bgView.backgroundColor = [UIColor clearColor];
+    bgView.backgroundColor = [UIColor colorWithRed:40/255.0 green:40/255.0 blue:40/255.0 alpha:1];
     [self.tabBar insertSubview:bgView atIndex:0];
 }
 

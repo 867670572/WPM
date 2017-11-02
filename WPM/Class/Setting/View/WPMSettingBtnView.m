@@ -56,8 +56,11 @@
         [_cleaningBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 100)];
         [_appInstructionBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 100)];
         [_informationBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 100)];
+    
+       
     }
     return self;
 }
+
 
 @end

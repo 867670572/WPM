@@ -23,13 +23,22 @@
 }
 
 - (void)setupUI{
-    _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
-    WPMSettingBtnView *SBV = [[WPMSettingBtnView alloc] initWithFrame:CGRectMake(10, 200, SCREEN_WIDTH - 20, SCREEN_HEIGHT - 200)];
-    _label = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-100)/2, (200-40)/2, 100, 40)];
+    _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 100 + 32 + 30,  SCREEN_WIDTH - 60, 60)];
+
+    WPMSettingBtnView *SBV = [[WPMSettingBtnView alloc] initWithFrame:CGRectMake(10, 100 + 32 + 30 + 60 + 20, SCREEN_WIDTH - 20, SCREEN_HEIGHT - (100 + 32 + 30 + 60 + 20 + 59))];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 60, 60)];
     _label.text = @"KD-310VP+";
     _label.textColor = [UIColor whiteColor];
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.backgroundColor = [UIColor darkGrayColor];
     [_imgView addSubview:_label];
     SBV.backgroundColor = [UIColor colorWithWhite:1  alpha:0.1];
+    [SBV.connectBtn addTarget:self action:@selector(touchConnectBtn) forControlEvents:UIControlEventTouchUpInside];
+    [SBV.settingBtn addTarget:self action:@selector(touchSettingBtn) forControlEvents:UIControlEventTouchUpInside];
+    [SBV.cleaningBtn addTarget:self action:@selector(touchCleaningBtn) forControlEvents:UIControlEventTouchUpInside];
+    [SBV.appInstructionBtn addTarget:self action:@selector(touchAppInstructionBtn) forControlEvents:UIControlEventTouchUpInside];
+    [SBV.informationBtn addTarget:self action:@selector(touchInformationBtn) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:SBV];
     [self.view addSubview:_imgView];
 }
@@ -45,14 +54,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchConnectBtn{
+    
 }
-*/
+- (void)touchSettingBtn{
+    NSLog(@"点尼玛");
+    WPMSettingPushSettingVC *SPSVC = [[WPMSettingPushSettingVC alloc]init];
+    [self.navigationController pushViewController:SPSVC animated:YES];
+    
+}
+- (void)touchCleaningBtn{
+    
+}
+- (void)touchAppInstructionBtn{
+    
+}
+- (void)touchInformationBtn{
+    
+}
 
 @end
