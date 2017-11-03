@@ -40,6 +40,7 @@
     label.textColor = [UIColor whiteColor];
     label.shadowColor = [UIColor blackColor];
     label.shadowOffset = CGSizeMake(5, 5);
+    label.adjustsFontSizeToFitWidth = YES;
     _sv = [[SelectView alloc] initWithFrame:CGRectMake(50, 100 + 32 + 30, SCREEN_WIDTH - 100, SCREEN_HEIGHT - (100 + 32 + 30) - 49)];
     _sv.backgroundColor = [UIColor clearColor];
     [self.view addSubview:label];

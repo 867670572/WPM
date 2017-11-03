@@ -15,4 +15,6 @@
 @property(nonatomic,strong)UIButton *selectBtn;
 @property(nonatomic,strong)NSMutableArray *mArrSelectBtn;
 @property(nonatomic,strong)UIButton *refreshBtn;
+@property(nonatomic,strong)NSMutableArray *mArrLabel;
+@property(nonatomic,strong)UILabel *label;
 @end
