@@ -12,7 +12,6 @@
 {
     //测试数组
     NSArray *arr;
-    int i;
     UIButton *btn1;
     UIButton *btn0;
 }
@@ -25,7 +24,6 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        i = 0;
         [self setupUI:frame];
     }
     return self;
