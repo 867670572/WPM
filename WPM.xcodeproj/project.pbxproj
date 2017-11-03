@@ -59,6 +59,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A71755321FAC31BD005B822A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71755331FAC31BD005B822A /* MASCompositeConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		A71755341FAC31BD005B822A /* MASCompositeConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		A71755351FAC31BD005B822A /* MASConstraint+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		A71755361FAC31BD005B822A /* MASConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		A71755371FAC31BD005B822A /* MASConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		A71755381FAC31BD005B822A /* MASConstraintMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		A71755391FAC31BD005B822A /* MASConstraintMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		A717553A1FAC31BD005B822A /* MASLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		A717553B1FAC31BD005B822A /* MASLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		A717553C1FAC31BD005B822A /* Masonry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		A717553D1FAC31BD005B822A /* MASUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		A717553E1FAC31BD005B822A /* MASViewAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		A717553F1FAC31BD005B822A /* MASViewAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		A71755401FAC31BD005B822A /* MASViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		A71755411FAC31BD005B822A /* MASViewConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		A71755421FAC31BD005B822A /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		A71755431FAC31BD005B822A /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A71755441FAC31BD005B822A /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A71755451FAC31BD005B822A /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		A71755461FAC31BD005B822A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		A71755471FAC31BD005B822A /* View+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		A71755481FAC31BD005B822A /* View+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		A71755491FAC31BD005B822A /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A717554A1FAC31BD005B822A /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		A717554B1FAC31BD005B822A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		A71755601FAC3221005B822A /* BabyBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
+		A71755611FAC3221005B822A /* BabyBluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyBluetooth.m; sourceTree = "<group>"; };
+		A71755621FAC3221005B822A /* BabyCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyCallback.h; sourceTree = "<group>"; };
+		A71755631FAC3221005B822A /* BabyCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyCallback.m; sourceTree = "<group>"; };
+		A71755641FAC3221005B822A /* BabyCentralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyCentralManager.h; sourceTree = "<group>"; };
+		A71755651FAC3221005B822A /* BabyCentralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyCentralManager.m; sourceTree = "<group>"; };
+		A71755661FAC3221005B822A /* BabyDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyDefine.h; sourceTree = "<group>"; };
+		A71755671FAC3221005B822A /* BabyDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyDefine.m; sourceTree = "<group>"; };
+		A71755681FAC3221005B822A /* BabyOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyOptions.h; sourceTree = "<group>"; };
+		A71755691FAC3221005B822A /* BabyOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyOptions.m; sourceTree = "<group>"; };
+		A717556A1FAC3221005B822A /* BabyPeripheralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyPeripheralManager.h; sourceTree = "<group>"; };
+		A717556B1FAC3221005B822A /* BabyPeripheralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyPeripheralManager.m; sourceTree = "<group>"; };
+		A717556C1FAC3221005B822A /* BabyRhythm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyRhythm.h; sourceTree = "<group>"; };
+		A717556D1FAC3221005B822A /* BabyRhythm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyRhythm.m; sourceTree = "<group>"; };
+		A717556E1FAC3221005B822A /* BabySpeaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabySpeaker.h; sourceTree = "<group>"; };
+		A717556F1FAC3221005B822A /* BabySpeaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
+		A71755701FAC3221005B822A /* BabyToy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
+		A71755711FAC3221005B822A /* BabyToy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		A71755731FAC32AC005B822A /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		A71755741FAC32AC005B822A /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A71755751FAC32AC005B822A /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A71755761FAC32AC005B822A /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A71755771FAC32AC005B822A /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A71755791FAC32CA005B822A /* CYByteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYByteManager.h; sourceTree = "<group>"; };
+		A717557A1FAC32CA005B822A /* CYByteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYByteManager.m; sourceTree = "<group>"; };
+		A717557B1FAC32CA005B822A /* CYByteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYByteModel.h; sourceTree = "<group>"; };
+		A717557C1FAC32CA005B822A /* CYByteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYByteModel.m; sourceTree = "<group>"; };
 		F17790DD1FAAFB76008B2EDF /* SelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
 		F17790DE1FAAFB76008B2EDF /* SelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		F17790E01FAB3754008B2EDF /* WPMSettingPushSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPMSettingPushSettingVC.h; sourceTree = "<group>"; };
@@ -151,6 +204,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A71755301FAC31BD005B822A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A71755781FAC32CA005B822A /* ByteManager */,
+				A71755721FAC32AC005B822A /* SVProgressHUD */,
+				A717555F1FAC3221005B822A /* BabyBluetooth */,
+				A71755311FAC31BD005B822A /* Masonry */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A71755311FAC31BD005B822A /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				A71755321FAC31BD005B822A /* Info.plist */,
+				A71755331FAC31BD005B822A /* MASCompositeConstraint.h */,
+				A71755341FAC31BD005B822A /* MASCompositeConstraint.m */,
+				A71755351FAC31BD005B822A /* MASConstraint+Private.h */,
+				A71755361FAC31BD005B822A /* MASConstraint.h */,
+				A71755371FAC31BD005B822A /* MASConstraint.m */,
+				A71755381FAC31BD005B822A /* MASConstraintMaker.h */,
+				A71755391FAC31BD005B822A /* MASConstraintMaker.m */,
+				A717553A1FAC31BD005B822A /* MASLayoutConstraint.h */,
+				A717553B1FAC31BD005B822A /* MASLayoutConstraint.m */,
+				A717553C1FAC31BD005B822A /* Masonry.h */,
+				A717553D1FAC31BD005B822A /* MASUtilities.h */,
+				A717553E1FAC31BD005B822A /* MASViewAttribute.h */,
+				A717553F1FAC31BD005B822A /* MASViewAttribute.m */,
+				A71755401FAC31BD005B822A /* MASViewConstraint.h */,
+				A71755411FAC31BD005B822A /* MASViewConstraint.m */,
+				A71755421FAC31BD005B822A /* NSArray+MASAdditions.h */,
+				A71755431FAC31BD005B822A /* NSArray+MASAdditions.m */,
+				A71755441FAC31BD005B822A /* NSArray+MASShorthandAdditions.h */,
+				A71755451FAC31BD005B822A /* NSLayoutConstraint+MASDebugAdditions.h */,
+				A71755461FAC31BD005B822A /* NSLayoutConstraint+MASDebugAdditions.m */,
+				A71755471FAC31BD005B822A /* View+MASAdditions.h */,
+				A71755481FAC31BD005B822A /* View+MASAdditions.m */,
+				A71755491FAC31BD005B822A /* View+MASShorthandAdditions.h */,
+				A717554A1FAC31BD005B822A /* ViewController+MASAdditions.h */,
+				A717554B1FAC31BD005B822A /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		A717555F1FAC3221005B822A /* BabyBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				A71755601FAC3221005B822A /* BabyBluetooth.h */,
+				A71755611FAC3221005B822A /* BabyBluetooth.m */,
+				A71755621FAC3221005B822A /* BabyCallback.h */,
+				A71755631FAC3221005B822A /* BabyCallback.m */,
+				A71755641FAC3221005B822A /* BabyCentralManager.h */,
+				A71755651FAC3221005B822A /* BabyCentralManager.m */,
+				A71755661FAC3221005B822A /* BabyDefine.h */,
+				A71755671FAC3221005B822A /* BabyDefine.m */,
+				A71755681FAC3221005B822A /* BabyOptions.h */,
+				A71755691FAC3221005B822A /* BabyOptions.m */,
+				A717556A1FAC3221005B822A /* BabyPeripheralManager.h */,
+				A717556B1FAC3221005B822A /* BabyPeripheralManager.m */,
+				A717556C1FAC3221005B822A /* BabyRhythm.h */,
+				A717556D1FAC3221005B822A /* BabyRhythm.m */,
+				A717556E1FAC3221005B822A /* BabySpeaker.h */,
+				A717556F1FAC3221005B822A /* BabySpeaker.m */,
+				A71755701FAC3221005B822A /* BabyToy.h */,
+				A71755711FAC3221005B822A /* BabyToy.m */,
+			);
+			path = BabyBluetooth;
+			sourceTree = "<group>";
+		};
+		A71755721FAC32AC005B822A /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A71755731FAC32AC005B822A /* SVIndefiniteAnimatedView.h */,
+				A71755741FAC32AC005B822A /* SVIndefiniteAnimatedView.m */,
+				A71755751FAC32AC005B822A /* SVProgressHUD.bundle */,
+				A71755761FAC32AC005B822A /* SVProgressHUD.h */,
+				A71755771FAC32AC005B822A /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		A71755781FAC32CA005B822A /* ByteManager */ = {
+			isa = PBXGroup;
+			children = (
+				A71755791FAC32CA005B822A /* CYByteManager.h */,
+				A717557A1FAC32CA005B822A /* CYByteManager.m */,
+				A717557B1FAC32CA005B822A /* CYByteModel.h */,
+				A717557C1FAC32CA005B822A /* CYByteModel.m */,
+			);
+			path = ByteManager;
+			sourceTree = "<group>";
+		};
 		F1D3FE7F1FA9BA1400A1DED7 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +322,7 @@
 				F1D3FEF61FA9BAA100A1DED7 /* AppDelegate */,
 				F1D3FEBD1FA9BAA100A1DED7 /* Class */,
 				F1D3FEFB1FA9BAA100A1DED7 /* Common */,
+				A71755301FAC31BD005B822A /* Lib */,
 				F1D3FEF91FA9BAA100A1DED7 /* Config */,
 				F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */,
 				F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */,
