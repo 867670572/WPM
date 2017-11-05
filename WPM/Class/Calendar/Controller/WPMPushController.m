@@ -7,20 +7,7 @@
 //
 
 #import "WPMPushController.h"
-#import "WPMAlbumTVCell.h"
-#import "WPMForHeaderView.h"
-
-
-
-@interface WPMPushController ()<UITableViewDelegate,UITableViewDataSource>
-{
-    //测试数据
-    NSMutableArray *arr;
-}
-@property (nonatomic,strong) UITableView *tabAlbum;
-@property (nonatomic,strong) WPMForHeaderView *headerView;
-
-
+@interface WPMPushController()
 @end
 
 @implementation WPMPushController
@@ -30,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    if (self.block != nil) {
+//        self.block(_titles);
+//    }
     
     [self setupUI];
 }
@@ -39,104 +29,36 @@
 }
 - (void)setupUI{
     //系统编辑按钮
+    
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _tabAlbum = [[UITableView alloc] initWithFrame:CGRectMake(0, 174,SCREEN_WIDTH,SCREEN_HEIGHT - 110 - 64) style:UITableViewStylePlain];
-    _tabAlbum.delegate = self;
-    _tabAlbum.dataSource = self;
-    _tabAlbum.backgroundColor = [UIColor clearColor];
+     _tabAlbum = [[WPMCalendarTableView alloc] initWithFrame:CGRectMake(10, 110,SCREEN_WIDTH -  20,SCREEN_HEIGHT - 110 - 64)];
+    _tabAlbum.index = _titles;
+    NSLog(@"%@",_tabAlbum.index);
+    
     _headerView = [[WPMForHeaderView alloc]initWithFrameAndSelectday:CGRectMake(10, 64, SCREEN_WIDTH-20, 110) Selectday:self.titles];
     _headerView.hWDMY.text = self.weekDayMonthYear;
+//    [self performSelector:@selector(blockClick) withObject:nil afterDelay:5];
     
-    _PAC = [[WPMPushAlbumController alloc] init];
-    arr = [NSMutableArray array];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
-    [arr addObject:@"Strong"];
     [self.view addSubview:_headerView];
     [self.view addSubview:_tabAlbum];
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"cell";
-    WPMAlbumTVCell *cell = [_tabAlbum dequeueReusableCellWithIdentifier:identifier];
     
-    if (cell == nil) {
-        cell = [[WPMAlbumTVCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
-    //选中不变色
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    //取消显示分割线
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    cell.backgroundColor = [UIColor clearColor];
-    cell.IDLabel.text = [NSString stringWithFormat:@"%ld\n\n",indexPath.row + 1];;
-    
-    cell.IDLabel.textAlignment = NSTextAlignmentCenter;
-    cell.IDLabel.numberOfLines = 3;
-    cell.IDLabel.textColor = [UIColor whiteColor];
-    NSString *imgName = [NSString stringWithFormat:@"%ld",indexPath.row];
-    cell.photoIV.image = [UIImage imageNamed:imgName];
-    cell.statusLabel.text = arr[indexPath.row];
-    cell.statusLabel.textAlignment = NSTextAlignmentRight;
-    cell.statusLabel.textColor = [UIColor whiteColor];
-    cell.dateLabel.text = self.titles;
-    cell.dateLabel.textAlignment = NSTextAlignmentRight;
-    cell.dateLabel.textColor = [UIColor whiteColor];
-    return cell;
-    
- 
+    //1. 实现block，使用__block的原因：是防止内存的泄露
+    __weak typeof(self) weakSelf = self;
+    //2. block的初始化
+    _tabAlbum.block = ^(NSString *imgName) {
+    //如果不用__block的对象，那么这里会提示一个警告 ------> 内存的
+    WPMPushAlbumController *PAC = [[WPMPushAlbumController alloc] init];
+    PAC.imgName = imgName;
+    [weakSelf.navigationController pushViewController:PAC animated:YES];
+    };
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return arr.count;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _PAC.imgName = [NSString stringWithFormat:@"%ld",indexPath.row];
-    [self.navigationController pushViewController:_PAC animated:YES];
-}
-
-//点击编辑按钮执行
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated{
     [super setEditing:editing animated:animated];
     //开启tab编辑
-    [_tabAlbum setEditing:editing animated:animated];
+    [_tabAlbum.tabAlbum setEditing:editing animated:animated];
 }
 
-- (void)tableView :(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    /**   点击 删除 按钮的操作 */
-    if (editingStyle==UITableViewCellEditingStyleDelete) {
-        
-        //        获取选中删除行索引值
-        
-        NSInteger row = [indexPath row];
-        
-        //        通过获取的索引值删除数组中的值
-        
-        [arr removeObjectAtIndex:row];
-        
-        //        删除单元格的某一行时，在用动画效果实现删除过程
-        
-        [_tabAlbum deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-       
-    }
-    
-}
+
+
 @end
 

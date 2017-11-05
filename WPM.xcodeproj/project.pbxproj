@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F17790DF1FAAFB76008B2EDF /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790DE1FAAFB76008B2EDF /* SelectView.m */; };
 		F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790E11FAB3754008B2EDF /* WPMSettingPushSettingVC.m */; };
+		F17801B11FAC1DF4008D9C00 /* WPMCalendarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17801B01FAC1DF4008D9C00 /* WPMCalendarTableView.m */; };
 		F1D3FE931FA9BA1400A1DED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */; };
 		F1D3FE951FA9BA1400A1DED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */; };
 		F1D3FE981FA9BA1400A1DED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D3FE961FA9BA1400A1DED7 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,8 @@
 		F17790DE1FAAFB76008B2EDF /* SelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		F17790E01FAB3754008B2EDF /* WPMSettingPushSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPMSettingPushSettingVC.h; sourceTree = "<group>"; };
 		F17790E11FAB3754008B2EDF /* WPMSettingPushSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPMSettingPushSettingVC.m; sourceTree = "<group>"; };
+		F17801AF1FAC1DF4008D9C00 /* WPMCalendarTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPMCalendarTableView.h; sourceTree = "<group>"; };
+		F17801B01FAC1DF4008D9C00 /* WPMCalendarTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPMCalendarTableView.m; sourceTree = "<group>"; };
 		F1D3FE881FA9BA1400A1DED7 /* WPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D3FE921FA9BA1400A1DED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				F1D3FEDF1FA9BAA100A1DED7 /* WPMForHeaderView.m */,
 				F1D3FEE01FA9BAA100A1DED7 /* WPMSingleWeekView.h */,
 				F1D3FEE11FA9BAA100A1DED7 /* WPMSingleWeekView.m */,
+				F17801AF1FAC1DF4008D9C00 /* WPMCalendarTableView.h */,
+				F17801B01FAC1DF4008D9C00 /* WPMCalendarTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 			files = (
 				F1D3FF191FA9BAA200A1DED7 /* AppDelegate.m in Sources */,
 				F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */,
+				F17801B11FAC1DF4008D9C00 /* WPMCalendarTableView.m in Sources */,
 				F1D3FF1B1FA9BAA200A1DED7 /* BaseViewController.m in Sources */,
 				F1D3FF171FA9BAA200A1DED7 /* WPMSettingVC.m in Sources */,
 				F1D3FF111FA9BAA200A1DED7 /* WPMCalendarScrollView.m in Sources */,

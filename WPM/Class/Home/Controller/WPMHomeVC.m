@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NSThread sleepForTimeInterval:1.0];
+    [NSThread sleepForTimeInterval:0.5];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self setupLiftLogo];
     [self setupUI];

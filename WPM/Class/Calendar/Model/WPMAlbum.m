@@ -9,12 +9,12 @@
 #import "WPMAlbum.h"
 
 @implementation WPMAlbum
--(id)initWithDate:(NSString *)date withDiary:(NSString *)diary withDiaryImage:(UIImage *)diaryImage withStatus:(NSString *)status{
+-(id)initWithDate:(NSString *)date withDiary:(NSString *)diary withDiaryImgName:(NSString *)diaryImgName withStatus:(NSString *)status{
     self = [super init];
     if (self) {
         _date = date;
         _diary = diary;
-        _diaryImage = diaryImage;
+        _diaryImgName = diaryImgName;
         _status = status;
     }
     return self;

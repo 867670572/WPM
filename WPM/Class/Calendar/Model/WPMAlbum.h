@@ -12,6 +12,6 @@
 @property(nonatomic,copy)NSString *status;
 @property(nonatomic,copy)NSString *date;
 @property(nonatomic,copy)NSString *diary;
-@property(nonatomic,strong)UIImage *diaryImage;
--(id)initWithDate:(NSString *)date withDiary:(NSString *)diary withDiaryImage:(UIImage *)diaryImage withStatus:(NSString *)status;
+@property(nonatomic,strong)NSString *diaryImgName;
+-(id)initWithDate:(NSString *)date withDiary:(NSString *)diary withDiaryImgName:(NSString *)diaryImgName withStatus:(NSString *)status;
 @end
