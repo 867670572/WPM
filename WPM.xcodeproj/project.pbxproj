@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DC2A1817A4F9451412D872E /* libPods-WPM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A1BFC54AE8F0A01676237 /* libPods-WPM.a */; };
+		A7E922561FAE445C00851FF0 /* CDZPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A70FA6C41FAE2F920054936B /* CDZPicker.m */; };
 		F17790DF1FAAFB76008B2EDF /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790DE1FAAFB76008B2EDF /* SelectView.m */; };
 		F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790E11FAB3754008B2EDF /* WPMSettingPushSettingVC.m */; };
 		F17801B11FAC1DF4008D9C00 /* WPMCalendarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17801B01FAC1DF4008D9C00 /* WPMCalendarTableView.m */; };
@@ -59,6 +61,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51D829C69352C9C1D440DD85 /* Pods-WPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPM.release.xcconfig"; path = "Pods/Target Support Files/Pods-WPM/Pods-WPM.release.xcconfig"; sourceTree = "<group>"; };
+		693A1BFC54AE8F0A01676237 /* libPods-WPM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70FA6C31FAE2F920054936B /* CDZPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDZPicker.h; sourceTree = "<group>"; };
+		A70FA6C41FAE2F920054936B /* CDZPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDZPicker.m; sourceTree = "<group>"; };
+		A71755601FAC3221005B822A /* BabyBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
+		A71755611FAC3221005B822A /* BabyBluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyBluetooth.m; sourceTree = "<group>"; };
+		A71755621FAC3221005B822A /* BabyCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyCallback.h; sourceTree = "<group>"; };
+		A71755631FAC3221005B822A /* BabyCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyCallback.m; sourceTree = "<group>"; };
+		A71755641FAC3221005B822A /* BabyCentralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyCentralManager.h; sourceTree = "<group>"; };
+		A71755651FAC3221005B822A /* BabyCentralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyCentralManager.m; sourceTree = "<group>"; };
+		A71755661FAC3221005B822A /* BabyDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyDefine.h; sourceTree = "<group>"; };
+		A71755671FAC3221005B822A /* BabyDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyDefine.m; sourceTree = "<group>"; };
+		A71755681FAC3221005B822A /* BabyOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyOptions.h; sourceTree = "<group>"; };
+		A71755691FAC3221005B822A /* BabyOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyOptions.m; sourceTree = "<group>"; };
+		A717556A1FAC3221005B822A /* BabyPeripheralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyPeripheralManager.h; sourceTree = "<group>"; };
+		A717556B1FAC3221005B822A /* BabyPeripheralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyPeripheralManager.m; sourceTree = "<group>"; };
+		A717556C1FAC3221005B822A /* BabyRhythm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyRhythm.h; sourceTree = "<group>"; };
+		A717556D1FAC3221005B822A /* BabyRhythm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyRhythm.m; sourceTree = "<group>"; };
+		A717556E1FAC3221005B822A /* BabySpeaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabySpeaker.h; sourceTree = "<group>"; };
+		A717556F1FAC3221005B822A /* BabySpeaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
+		A71755701FAC3221005B822A /* BabyToy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
+		A71755711FAC3221005B822A /* BabyToy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		A71755731FAC32AC005B822A /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		A71755741FAC32AC005B822A /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A71755751FAC32AC005B822A /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A71755761FAC32AC005B822A /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A71755771FAC32AC005B822A /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A71755791FAC32CA005B822A /* CYByteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYByteManager.h; sourceTree = "<group>"; };
+		A717557A1FAC32CA005B822A /* CYByteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYByteManager.m; sourceTree = "<group>"; };
+		A717557B1FAC32CA005B822A /* CYByteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYByteModel.h; sourceTree = "<group>"; };
+		A717557C1FAC32CA005B822A /* CYByteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYByteModel.m; sourceTree = "<group>"; };
+		DFD99ACF9828AC4E6906D10A /* Pods-WPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WPM/Pods-WPM.debug.xcconfig"; sourceTree = "<group>"; };
 		F17790DD1FAAFB76008B2EDF /* SelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
 		F17790DE1FAAFB76008B2EDF /* SelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		F17790E01FAB3754008B2EDF /* WPMSettingPushSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPMSettingPushSettingVC.h; sourceTree = "<group>"; };
@@ -131,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC2A1817A4F9451412D872E /* libPods-WPM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +186,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D8AEDE13128D55082FAE01F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				693A1BFC54AE8F0A01676237 /* libPods-WPM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A70FA6C11FAE2F690054936B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A70FA6C21FAE2F920054936B /* CDZPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A70FA6C31FAE2F920054936B /* CDZPicker.h */,
+				A70FA6C41FAE2F920054936B /* CDZPicker.m */,
+			);
+			path = CDZPicker;
+			sourceTree = "<group>";
+		};
+		A71755301FAC31BD005B822A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A70FA6C21FAE2F920054936B /* CDZPicker */,
+				A71755781FAC32CA005B822A /* ByteManager */,
+				A71755721FAC32AC005B822A /* SVProgressHUD */,
+				A717555F1FAC3221005B822A /* BabyBluetooth */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A717555F1FAC3221005B822A /* BabyBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				A71755601FAC3221005B822A /* BabyBluetooth.h */,
+				A71755611FAC3221005B822A /* BabyBluetooth.m */,
+				A71755621FAC3221005B822A /* BabyCallback.h */,
+				A71755631FAC3221005B822A /* BabyCallback.m */,
+				A71755641FAC3221005B822A /* BabyCentralManager.h */,
+				A71755651FAC3221005B822A /* BabyCentralManager.m */,
+				A71755661FAC3221005B822A /* BabyDefine.h */,
+				A71755671FAC3221005B822A /* BabyDefine.m */,
+				A71755681FAC3221005B822A /* BabyOptions.h */,
+				A71755691FAC3221005B822A /* BabyOptions.m */,
+				A717556A1FAC3221005B822A /* BabyPeripheralManager.h */,
+				A717556B1FAC3221005B822A /* BabyPeripheralManager.m */,
+				A717556C1FAC3221005B822A /* BabyRhythm.h */,
+				A717556D1FAC3221005B822A /* BabyRhythm.m */,
+				A717556E1FAC3221005B822A /* BabySpeaker.h */,
+				A717556F1FAC3221005B822A /* BabySpeaker.m */,
+				A71755701FAC3221005B822A /* BabyToy.h */,
+				A71755711FAC3221005B822A /* BabyToy.m */,
+			);
+			path = BabyBluetooth;
+			sourceTree = "<group>";
+		};
+		A71755721FAC32AC005B822A /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A71755731FAC32AC005B822A /* SVIndefiniteAnimatedView.h */,
+				A71755741FAC32AC005B822A /* SVIndefiniteAnimatedView.m */,
+				A71755751FAC32AC005B822A /* SVProgressHUD.bundle */,
+				A71755761FAC32AC005B822A /* SVProgressHUD.h */,
+				A71755771FAC32AC005B822A /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		A71755781FAC32CA005B822A /* ByteManager */ = {
+			isa = PBXGroup;
+			children = (
+				A71755791FAC32CA005B822A /* CYByteManager.h */,
+				A717557A1FAC32CA005B822A /* CYByteManager.m */,
+				A717557B1FAC32CA005B822A /* CYByteModel.h */,
+				A717557C1FAC32CA005B822A /* CYByteModel.m */,
+			);
+			path = ByteManager;
+			sourceTree = "<group>";
+		};
+		EBEA0B49D2491433911A6E4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFD99ACF9828AC4E6906D10A /* Pods-WPM.debug.xcconfig */,
+				51D829C69352C9C1D440DD85 /* Pods-WPM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F1D3FE7F1FA9BA1400A1DED7 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +285,8 @@
 				F1D3FEA31FA9BA1400A1DED7 /* WPMTests */,
 				F1D3FEAE1FA9BA1400A1DED7 /* WPMUITests */,
 				F1D3FE891FA9BA1400A1DED7 /* Products */,
+				EBEA0B49D2491433911A6E4F /* Pods */,
+				6D8AEDE13128D55082FAE01F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +306,7 @@
 				F1D3FEF61FA9BAA100A1DED7 /* AppDelegate */,
 				F1D3FEBD1FA9BAA100A1DED7 /* Class */,
 				F1D3FEFB1FA9BAA100A1DED7 /* Common */,
+				A71755301FAC31BD005B822A /* Lib */,
 				F1D3FEF91FA9BAA100A1DED7 /* Config */,
 				F1D3FE941FA9BA1400A1DED7 /* Assets.xcassets */,
 				F1D3FE911FA9BA1400A1DED7 /* Main.storyboard */,
@@ -284,7 +414,7 @@
 			children = (
 				F1D3FEE31FA9BAA100A1DED7 /* Controller */,
 				F1D3FEE61FA9BAA100A1DED7 /* Model */,
-				F1D3FEE71FA9BAA100A1DED7 /* View */,
+				A70FA6C11FAE2F690054936B /* View */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -303,13 +433,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F1D3FEE71FA9BAA100A1DED7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F1D3FEE81FA9BAA100A1DED7 /* Home */ = {
@@ -445,9 +568,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D3FEB41FA9BA1400A1DED7 /* Build configuration list for PBXNativeTarget "WPM" */;
 			buildPhases = (
+				5D0C4BB4BAE3489E0B57B7C1 /* [CP] Check Pods Manifest.lock */,
 				F1D3FE841FA9BA1400A1DED7 /* Sources */,
 				F1D3FE851FA9BA1400A1DED7 /* Frameworks */,
 				F1D3FE861FA9BA1400A1DED7 /* Resources */,
+				0F02113DF835AD96F4B96C29 /* [CP] Embed Pods Frameworks */,
+				D79777A6882A3671B0B8FCAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -566,11 +692,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F02113DF835AD96F4B96C29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPM/Pods-WPM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D0C4BB4BAE3489E0B57B7C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79777A6882A3671B0B8FCAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPM/Pods-WPM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1D3FE841FA9BA1400A1DED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E922561FAE445C00851FF0 /* CDZPicker.m in Sources */,
 				F1D3FF191FA9BAA200A1DED7 /* AppDelegate.m in Sources */,
 				F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */,
 				F17801B11FAC1DF4008D9C00 /* WPMCalendarTableView.m in Sources */,
@@ -758,6 +936,7 @@
 		};
 		F1D3FEB51FA9BA1400A1DED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD99ACF9828AC4E6906D10A /* Pods-WPM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -775,6 +954,7 @@
 		};
 		F1D3FEB61FA9BA1400A1DED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D829C69352C9C1D440DD85 /* Pods-WPM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
