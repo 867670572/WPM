@@ -25,7 +25,7 @@
         _albumModel = [[WPMAlbumModel alloc] init];
         allKays = [_albumModel.mdicAlbum allKeys];
         NSLog(@"%@",allKays);
-        [self performSelector:@selector(blockClick) withObject:nil afterDelay:0.01];
+        [self performSelector:@selector(returnIndex) withObject:nil afterDelay:0.01];
         [self setupUI:frame];
     }
     return self;
@@ -47,7 +47,7 @@
 //    [_tabAlbum reloadData];
     
 }
-- (void)blockClick{
+- (void)returnIndex{
     for (int i = 0; i < allKays.count; i++) {
         //创建索引
         if ([_index isEqualToString:[allKays objectAtIndex:i]]) {
@@ -143,19 +143,13 @@
 
 - (void)tableView :(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     /**   点击 删除 按钮的操作 */
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
         //        获取选中删除行索引值
-        
         NSIndexSet *section = [[NSIndexSet alloc] initWithIndex:indexPath.section];
-        
         //        通过获取的索引值删除数组中的值
-        
         [_mArrSearchDate removeObjectAtIndex:indexPath.section];
         //        删除单元格的某一行时，在用动画效果实现删除过程
-        
         [_tabAlbum deleteSections:section withRowAnimation:UITableViewRowAnimationNone];
         [_tabAlbum reloadData];
     }

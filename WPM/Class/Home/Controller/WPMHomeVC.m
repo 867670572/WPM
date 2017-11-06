@@ -22,16 +22,13 @@
     [self setupUI];
     
 }
-
 - (void)setupLiftLogo{
     UIButton *logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    logoBtn.frame = CGRectMake(0, 0, 15, 26);
+    logoBtn.frame = CGRectMake(0, 20, 150, 44);
     [logoBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:logoBtn];
     [logoBtn setUserInteractionEnabled:NO];
-    self.navigationItem.leftBarButtonItem = backItem;
+    [self.view addSubview:logoBtn];
 }
-
 - (void)setupUI{
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, SCREEN_WIDTH- 60, 32)];
     label.text = @"Select Your Machine";
@@ -51,7 +48,6 @@
     [_selectBtn addTarget:self action:@selector(selectGo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_selectBtn];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -69,5 +65,4 @@
     _selectBtn.hidden = YES;
     [self.view addSubview:_sv];
 }
-
 @end

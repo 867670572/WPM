@@ -18,9 +18,7 @@
 @implementation WPMCalendarVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    
+    [super viewDidLoad];  
     [self addRightBtn];
     [self setupCalendar]; // 初始化日历对象
 }

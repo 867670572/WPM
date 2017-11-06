@@ -16,7 +16,6 @@
 		F1D3FE9B1FA9BA1400A1DED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FE9A1FA9BA1400A1DED7 /* main.m */; };
 		F1D3FEA51FA9BA1400A1DED7 /* WPMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEA41FA9BA1400A1DED7 /* WPMTests.m */; };
 		F1D3FEB01FA9BA1400A1DED7 /* WPMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEAF1FA9BA1400A1DED7 /* WPMUITests.m */; };
-		F1D3FF051FA9BAA200A1DED7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */; };
 		F1D3FF061FA9BAA200A1DED7 /* WPMAlbumSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */; };
 		F1D3FF071FA9BAA200A1DED7 /* WPMCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC51FA9BAA100A1DED7 /* WPMCalendarVC.m */; };
 		F1D3FF081FA9BAA200A1DED7 /* WPMPushAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D3FEC71FA9BAA100A1DED7 /* WPMPushAlbumController.m */; };
@@ -78,8 +77,6 @@
 		F1D3FEAB1FA9BA1400A1DED7 /* WPMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WPMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D3FEAF1FA9BA1400A1DED7 /* WPMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPMUITests.m; sourceTree = "<group>"; };
 		F1D3FEB11FA9BA1400A1DED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1D3FEC01FA9BAA100A1DED7 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		F1D3FEC21FA9BAA100A1DED7 /* WPMAlbumSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMAlbumSearchVC.h; sourceTree = "<group>"; };
 		F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMAlbumSearchVC.m; sourceTree = "<group>"; };
 		F1D3FEC41FA9BAA100A1DED7 /* WPMCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMCalendarVC.h; sourceTree = "<group>"; };
@@ -232,8 +229,6 @@
 		F1D3FEBF1FA9BAA100A1DED7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F1D3FEC01FA9BAA100A1DED7 /* CollectionViewController.h */,
-				F1D3FEC11FA9BAA100A1DED7 /* CollectionViewController.m */,
 				F1D3FEC21FA9BAA100A1DED7 /* WPMAlbumSearchVC.h */,
 				F1D3FEC31FA9BAA100A1DED7 /* WPMAlbumSearchVC.m */,
 				F1D3FEC41FA9BAA100A1DED7 /* WPMCalendarVC.h */,
@@ -585,7 +580,6 @@
 				F1D3FF0A1FA9BAA200A1DED7 /* NSDate+WPMCalendar.m in Sources */,
 				F1D3FF081FA9BAA200A1DED7 /* WPMPushAlbumController.m in Sources */,
 				F1D3FF0B1FA9BAA200A1DED7 /* WPMAlbum.m in Sources */,
-				F1D3FF051FA9BAA200A1DED7 /* CollectionViewController.m in Sources */,
 				F1D3FF0E1FA9BAA200A1DED7 /* WPMAlbumTVCell.m in Sources */,
 				F1D3FF071FA9BAA200A1DED7 /* WPMCalendarVC.m in Sources */,
 				F1D3FF101FA9BAA200A1DED7 /* WPMCalendarCell.m in Sources */,

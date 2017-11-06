@@ -35,29 +35,16 @@
             label.font = [UIFont fontWithName:@"PingFang SC" size:13.5];
             label.textAlignment = NSTextAlignmentCenter;
             label.textColor = [UIColor whiteColor];
-            
         }
+        [self labelShowdataWithNowDate:selectday frame:frame];
         for (int i = 0; i < 7; ++i) {
             UILabel *label1 = [mArrSingleWeed objectAtIndex:i];
-            label1.text = [self labelShowdataWithFromTag:i NowDate:selectday frame:frame];
             [_singleWeekView addSubview:label1];
       }
+        
     }
     return self;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 //tag转str
 - (NSString *)tagChangeStr:(NSInteger)tag{
     switch (tag) {
@@ -116,74 +103,221 @@
 
 //nowDay == selectday == 日/月/年
 //控制label显示该显示的数据
-- (NSString *)labelShowdataWithFromTag:(NSInteger)tag NowDate:(NSString*)nowDate frame:(CGRect)frame{
+- (void)labelShowdataWithNowDate:(NSString*)nowDate frame:(CGRect)frame{
     CGFloat height = frame.size.height;
     CGFloat width = (SCREEN_WIDTH - 20) / 7.0;
     //标志今天小圆点
     UIView *pointView = [[UIView alloc] init];
     pointView.layer.cornerRadius = 0.5 * (height-14);
     pointView.backgroundColor = HEXCOLOR(0x19A79D);
-
     //字符串格式转换
     //年-月-日
     NSString *selectdayD = [self dateChangeStr:nowDate][0];
     //得到对应的周几
     NSString *selectdayWD = [WPMCalendarVC weekdayStringFromDate:selectdayD];
-    //创建新的tag接收
-//    NSInteger nowDayTag;
-    //选中的日期
+    //选中的日期的年月日
+    NSString *nowYear = [self dateChangeStr:nowDate][1];
+    NSString *nowMonth = [self dateChangeStr:nowDate][2];
     NSString *nowDay = [self dateChangeStr:nowDate][3];
-    NSInteger nowDayInt = [nowDay intValue];
-    
-    
-    UILabel *label0 = [mArrSingleWeed objectAtIndex:tag];
-    
-    if ([selectdayWD isEqualToString:[self tagChangeStr:label0.tag]]){
-        NSLog(@"%ld",label0.tag);
-        pointView.frame = CGRectMake(label0.tag  * width+(width-height+14)*0.5, 7 ,height-14,height-14);
-//        nowDayTag = tag;
-        [_singleWeekView addSubview:pointView];
+
+    int nowDayInt = [nowDay intValue];
+    NSInteger tag = 0;
+    if ([selectdayWD isEqualToString:@"Sunday"]) {
+        tag = 0;
     }
-//    }if(nowDayTag == []) {
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day0 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day0;
-//    }
-//    if(nowDayTag == 101){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day1 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day1;
-//    }
-//    if(nowDayTag == 102){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day2 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day2;
-//    }
-//    if(nowDayTag == 103){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day3 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day3;
-//    }
-//    if(nowDayTag == 104){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day4 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day4;
-//    }
-//    if(nowDayTag == 105){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day5 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day5;
-//    }
-//    if(nowDayTag == 106){
-//        nowDayInt = ABS(nowDayInt- ABS(nowDayTag - tag));
-//        day6 = [NSString stringWithFormat:@"%ld",nowDayInt];
-//        return day6;
-//    }
-
-
-    return nowDay;
-
-
+    if ([selectdayWD isEqualToString:@"Monday"]) {
+        tag = 1;
+    }
+    if ([selectdayWD isEqualToString:@"Tuesday"]) {
+        tag = 2;
+    }
+    if ([selectdayWD isEqualToString:@"Wednesday"]) {
+        tag = 3;
+    }
+    if ([selectdayWD isEqualToString:@"Thursday"]) {
+        tag = 4;
+    }
+    if ([selectdayWD isEqualToString:@"Friday"]) {
+        tag = 5;
+    }
+    if ([selectdayWD isEqualToString:@"Saturday"]) {
+        tag = 6;
+    }
+    pointView.frame = CGRectMake(tag * width+(width-height+14)*0.5, 7 ,height-14,height-14);
+    [_singleWeekView addSubview:pointView];
+    //创建label接收数组中的label
+    UILabel *label0 = [mArrSingleWeed objectAtIndex:0];
+    UILabel *label1 = [mArrSingleWeed objectAtIndex:1];
+    UILabel *label2 = [mArrSingleWeed objectAtIndex:2];
+    UILabel *label3 = [mArrSingleWeed objectAtIndex:3];
+    UILabel *label4 = [mArrSingleWeed objectAtIndex:4];
+    UILabel *label5 = [mArrSingleWeed objectAtIndex:5];
+    UILabel *label6 = [mArrSingleWeed objectAtIndex:6];
+    int dayInt = nowDayInt;
+    NSString *str;
+    NSMutableArray *mArrDay = [NSMutableArray array];
+    if (tag == 0) {
+        //第一位
+        dayInt = nowDayInt - 0;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 1) {
+        //第一位
+        dayInt = nowDayInt - 1;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 2) {
+        //第一位
+        dayInt = nowDayInt - 2;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 3) {
+        //第一位
+        dayInt = nowDayInt - 3;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 4) {
+        //第一位
+        dayInt = nowDayInt - 4;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 5) {
+        //第一位
+        dayInt = nowDayInt - 5;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    if (tag == 6) {
+        //第一位
+        dayInt = nowDayInt - 6;
+        if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+            str = @"\t";
+            [mArrDay addObject:str];
+        }else{
+            str = [NSString stringWithFormat:@"%d",dayInt];
+            [mArrDay addObject:str];
+        }
+        //后面六位
+        for (int i = 1; i < 7; i++) {
+            dayInt = dayInt + 1;
+            if (dayInt < 1 || dayInt > [self howManyDaysInThisYear:nowYear withMonth:nowMonth]){
+                str = @"\t";
+                [mArrDay addObject:str];
+            }else{
+                str = [NSString stringWithFormat:@"%d",dayInt];
+                [mArrDay addObject:str];
+            }
+        }
+    }
+    label0.text = [mArrDay objectAtIndex:0];
+    label1.text = [mArrDay objectAtIndex:1];
+    label2.text = [mArrDay objectAtIndex:2];
+    label3.text = [mArrDay objectAtIndex:3];
+    label4.text = [mArrDay objectAtIndex:4];
+    label5.text = [mArrDay objectAtIndex:5];
+    label6.text = [mArrDay objectAtIndex:6];
+    [mArrDay removeAllObjects];
 }
 
 //获取某年某月的天数
