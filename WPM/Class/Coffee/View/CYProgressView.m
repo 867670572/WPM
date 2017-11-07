@@ -40,7 +40,7 @@
     if (progress == 0) {
         self.progressView.backgroundColor = [UIColor clearColor];
         CGRect frame = CGRectMake(0, 0, progress*self.frame.size.width, FrameHeight);
-        [UIView animateWithDuration:1.5 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
             self.progressView.frame = frame;
             
             
@@ -49,7 +49,7 @@
         self.progressView.backgroundColor = [UIColor whiteColor];
         CGRect frame = CGRectMake(0, 0, progress*self.frame.size.width, FrameHeight);
 //        CGRect imageFrame = CGRectMake(progress*self.frame.size.width-FrameHeight, -FrameHeight/2, FrameHeight*2, FrameHeight*2);
-        [UIView animateWithDuration:1.5 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
             self.progressView.frame = frame;
 //            self.imageView.frame = imageFrame;
 

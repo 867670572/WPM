@@ -62,27 +62,26 @@
     UITabBarItem *item4 = [tabbar.items objectAtIndex:3];
 
 
-    item1.image = [[UIImage imageNamed:@"home icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.image = [[UIImage imageNamed:@"icon_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    //拉伸item的图片
-    item1.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0);
+    item1.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
 //    //调整item文字位置
 //    [item1 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item1.title = @"首页";
 
-    item2.image = [[UIImage imageNamed:@"calendar icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.selectedImage = [[UIImage imageNamed:@"calendar icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.imageInsets = UIEdgeInsetsMake(15, 0, -15, 0);
+    item2.image = [[UIImage imageNamed:@"icon_cal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
 //    [item2 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item2.title = @"日记";
 
 
-    item3.image = [[UIImage imageNamed:@"coffee icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0);
+    item3.image = [[UIImage imageNamed:@"icon_coffee"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
 //    [item3 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item3.title = @"咖啡";
 
-    item4.image = [[UIImage imageNamed:@"setting icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item4.imageInsets = UIEdgeInsetsMake(10, 0, -10, 0);
+    item4.image = [[UIImage imageNamed:@"icon_more"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item4.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
 //    [item4 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item4.title = @"设置";
 

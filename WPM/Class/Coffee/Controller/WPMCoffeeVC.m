@@ -11,6 +11,8 @@
 #import "CYByteManager.h"
 #import "CDZPicker.h"
 #import "CYProgressView.h"
+#import "CYChartView.h"
+#import "CYChartImageView.h"
 
 @interface WPMCoffeeVC ()
 @property (nonatomic,strong) UIButton *oneCupButton;
@@ -19,6 +21,7 @@
 @property (nonatomic,strong) UILabel *tempLabel;
 @property (nonatomic,strong) UILabel *timeLabel;
 @property (nonatomic,strong) UILabel *pressureLabel;
+@property (nonatomic,strong) CYChartView *chartView;
 @property (nonatomic,strong) UIButton *stageButton;
 @property (nonatomic,strong) UIButton *openButton;
 @property (nonatomic,strong) UIButton *saveButton;
@@ -27,6 +30,8 @@
 @property (nonatomic,strong) UILabel *timeSettingLabel;
 @property (nonatomic,strong) CYProgressView *timeProgressView;
 @property (nonatomic,assign) float time;
+@property (nonatomic,strong) CYChartImageView *chartImageView;
+
 
 @end
 
@@ -37,10 +42,23 @@
     self.isOneCup = YES;
     [self setUI];
     self.time = 0;
+    self.tabBarController.tabBar.hidden = YES;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     
+    [self setData];
+}
+- (void)setData{
+    self.chartImageView.chartView.p1 = 4;
+    self.chartImageView.chartView.p2 = 3;
+    self.chartImageView.chartView.p3 = 6;
+    self.chartImageView.chartView.p4 = 5;
+    self.chartImageView.chartView.t1 = 10;
+    self.chartImageView.chartView.t2 = 3;
+    self.chartImageView.chartView.t3 = 5;
+    self.chartImageView.chartView.t4 = 10;
 }
 - (void)setUI{
-    UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.view.frame.size.height)];
     backgroudView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:backgroudView];
     [backgroudView addSubview:self.oneCupButton];
@@ -58,25 +76,36 @@
     twoCupLabel.textColor = [UIColor whiteColor];
     [backgroudView addSubview:twoCupLabel];
     
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+//    scrollView.pagingEnabled =YES;
+//    scrollView.bounces = NO;//弹簧效果
+    [backgroudView addSubview:scrollView];
+    
+    UIView *containerView = [[UIView alloc]init];
+    [scrollView addSubview:containerView];
+    
     UIImageView *tempImageView = [[UIImageView alloc] init];
 //    tempImageView.backgroundColor = [UIColor lightGrayColor];
-    tempImageView.image = [UIImage imageNamed:@"circle half bg"];
-    [backgroudView addSubview:tempImageView];
+    tempImageView.image = [UIImage imageNamed:@"circle_half_bg"];
+    [containerView addSubview:tempImageView];
     
     [tempImageView addSubview:self.tempLabel];
     [tempImageView addSubview:self.timeLabel];
     
     UIImageView *pressureImageView = [[UIImageView alloc] init];
-    pressureImageView.image = [UIImage imageNamed:@"circle red bg"];
-    [backgroudView addSubview:pressureImageView];
+    pressureImageView.image = [UIImage imageNamed:@"circle_red_bg"];
+    [containerView addSubview:pressureImageView];
     
     [pressureImageView addSubview:self.pressureLabel];
+    
+    
+    [containerView addSubview:self.chartImageView];
     
     
     UIImageView *stageImageView = [[UIImageView alloc] init];
     stageImageView.image = [UIImage imageNamed:@"bg1"];
     stageImageView.userInteractionEnabled = YES;
-    [backgroudView addSubview:stageImageView];
+    [containerView addSubview:stageImageView];
     
     [stageImageView addSubview:self.stageButton];
     [stageImageView addSubview:self.openButton];
@@ -85,7 +114,7 @@
     UIImageView *pressureBackgroundImageView = [[UIImageView alloc] init];
     pressureBackgroundImageView.image = [UIImage imageNamed:@"bg2"];
     pressureBackgroundImageView.userInteractionEnabled = YES;
-    [backgroudView addSubview:pressureBackgroundImageView];
+    [containerView addSubview:pressureBackgroundImageView];
     
     UIImageView *preImageView = [[UIImageView alloc] init];
     preImageView.image = [UIImage imageNamed:@"pressure icon"];
@@ -121,7 +150,7 @@
     UIImageView *timeBackgroundImageView = [[UIImageView alloc] init];
     timeBackgroundImageView.image = [UIImage imageNamed:@"bg2"];
     timeBackgroundImageView.userInteractionEnabled = YES;
-    [backgroudView addSubview:timeBackgroundImageView];
+    [containerView addSubview:timeBackgroundImageView];
     
     UIImageView *timeImageView = [[UIImageView alloc] init];
     timeImageView.image = [UIImage imageNamed:@"time icon"];
@@ -183,9 +212,20 @@
         make.size.mas_equalTo(CGSizeMake(60, 20));
     }];
     
-    [tempImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(oneCupLabel.mas_bottom).offset(10);
-        make.right.mas_equalTo(backgroudView.mas_centerX).offset(-10);
+        make.left.right.bottom.mas_equalTo(backgroudView);
+        
+    }];
+    
+    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scrollView);
+        make.width.equalTo(scrollView); // 需要设置宽度和scrollview宽度一样
+    }];
+    
+    [tempImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(containerView);
+        make.right.mas_equalTo(containerView.mas_centerX).offset(-10);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
     
@@ -204,7 +244,7 @@
     
     [pressureImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(tempImageView);
-        make.left.mas_equalTo(backgroudView.mas_centerX).offset(10);
+        make.left.mas_equalTo(containerView.mas_centerX).offset(10);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
     
@@ -213,10 +253,17 @@
         make.size.mas_equalTo(CGSizeMake(60, 20));
     }];
     
+    [self.chartImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pressureImageView.mas_bottom).offset(10);
+        make.left.mas_equalTo(containerView).offset(10);
+        make.right.mas_equalTo(containerView).offset(-10);
+        make.height.mas_equalTo(180);
+    }];
+    
     [stageImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(pressureImageView.mas_bottom).offset(40);
-        make.left.mas_equalTo(backgroudView).offset(20);
-        make.right.mas_equalTo(backgroudView).offset(-20);
+        make.top.mas_equalTo(weakSelf.chartImageView.mas_bottom).offset(5);
+        make.left.mas_equalTo(containerView).offset(10);
+        make.right.mas_equalTo(containerView).offset(-10);
         make.height.mas_equalTo(60);
     }];
     
@@ -242,8 +289,8 @@
     
     [pressureBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(stageImageView);
-        make.top.mas_equalTo(stageImageView.mas_bottom).offset(10);
-        make.height.mas_equalTo(100);
+        make.top.mas_equalTo(stageImageView.mas_bottom).offset(5);
+        make.height.mas_equalTo(90);
     }];
     
     [preImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -285,8 +332,8 @@
     
     [timeBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(stageImageView);
-        make.top.mas_equalTo(pressureBackgroundImageView.mas_bottom).offset(10);
-        make.height.mas_equalTo(100);
+        make.top.mas_equalTo(pressureBackgroundImageView.mas_bottom).offset(5);
+        make.height.mas_equalTo(90);
     }];
     
     [timeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -324,6 +371,10 @@
         make.right.mas_equalTo(tPlusButton.mas_left).offset(-10);
         make.centerY.mas_equalTo(tMinusButton);
     }];
+    
+    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(timeBackgroundImageView.mas_bottom).offset(10);// 这里放最后一个view的底部
+    }];
 }
 
 #pragma mark - button click method
@@ -352,6 +403,16 @@
         
     } withConfirmBlock:^(NSString *string) {
         [weakSelf.stageButton setTitle:string forState:UIControlStateNormal];
+        if ([string isEqualToString:@"Stage1"]) {
+            self.chartImageView.chartView.currentPath = 1;
+        }else if ([string isEqualToString:@"Stage2"]){
+            self.chartImageView.chartView.currentPath = 2;
+        }else if ([string isEqualToString:@"Stage3"]){
+            self.chartImageView.chartView.currentPath = 3;
+        }else{
+            self.chartImageView.chartView.currentPath = 4;
+        }
+        [self.chartImageView.chartView setNeedsDisplay];
     }];
 }
 
@@ -377,6 +438,8 @@
         self.time -= 1;
         self.timeProgressView.progress = self.time/10;
         self.timeSettingLabel.text = [NSString stringWithFormat:@"%1.fs",self.time];
+        self.chartImageView.chartView.t1 = self.time;
+        [self.chartImageView.chartView setNeedsDisplay];
 
     }
     
@@ -386,8 +449,11 @@
     if (self.time < 10 ) {
         self.time += 1;
         self.timeProgressView.progress = self.time/10;
+        self.chartImageView.chartView.t1 = self.time;
         self.timeSettingLabel.text = [NSString stringWithFormat:@"%.fs",self.time];
         NSLog(@"%.1f",self.time);
+        
+        [self.chartImageView.chartView setNeedsDisplay];
     }
     
 }
@@ -498,7 +564,7 @@
 }
 -(CYProgressView *)preProgressView{
     if (!_preProgressView) {
-        _preProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-148, 15)];
+        _preProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-128, 15)];
         _preProgressView.progress = 0.375;
     }
     return _preProgressView;
@@ -518,9 +584,16 @@
 }
 -(CYProgressView *)timeProgressView{
     if (!_timeProgressView) {
-        _timeProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-148, 15)];
+        _timeProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-128, 15)];
         _timeProgressView.progress = 0.375;
     }
     return _timeProgressView;
+}
+-(CYChartImageView *)chartImageView{
+    if (!_chartImageView) {
+        _chartImageView = [[CYChartImageView alloc] init];
+        _chartImageView.image = [UIImage imageNamed:@"chart_bg"];
+    }
+    return _chartImageView;
 }
 @end

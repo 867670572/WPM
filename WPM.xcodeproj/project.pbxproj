@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DC2A1817A4F9451412D872E /* libPods-WPM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A1BFC54AE8F0A01676237 /* libPods-WPM.a */; };
+		A7136ACB1FB19F1C0017B170 /* CYChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7136ACA1FB19F1B0017B170 /* CYChartView.m */; };
+		A7136ACE1FB1A2BE0017B170 /* CYChartImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7136ACD1FB1A2BE0017B170 /* CYChartImageView.m */; };
 		A71457171FB015EC00EEC580 /* CYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71457151FB010B500EEC580 /* CYProgressView.m */; };
 		A7E922561FAE445C00851FF0 /* CDZPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A70FA6C41FAE2F920054936B /* CDZPicker.m */; };
 		F17790DF1FAAFB76008B2EDF /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790DE1FAAFB76008B2EDF /* SelectView.m */; };
@@ -66,6 +68,10 @@
 		693A1BFC54AE8F0A01676237 /* libPods-WPM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70FA6C31FAE2F920054936B /* CDZPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDZPicker.h; sourceTree = "<group>"; };
 		A70FA6C41FAE2F920054936B /* CDZPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDZPicker.m; sourceTree = "<group>"; };
+		A7136AC91FB19F1B0017B170 /* CYChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYChartView.h; sourceTree = "<group>"; };
+		A7136ACA1FB19F1B0017B170 /* CYChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYChartView.m; sourceTree = "<group>"; };
+		A7136ACC1FB1A2BE0017B170 /* CYChartImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYChartImageView.h; sourceTree = "<group>"; };
+		A7136ACD1FB1A2BE0017B170 /* CYChartImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYChartImageView.m; sourceTree = "<group>"; };
 		A71457151FB010B500EEC580 /* CYProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYProgressView.m; sourceTree = "<group>"; };
 		A71457161FB010B500EEC580 /* CYProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYProgressView.h; sourceTree = "<group>"; };
 		A71755601FAC3221005B822A /* BabyBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
@@ -211,6 +217,10 @@
 			children = (
 				A71457161FB010B500EEC580 /* CYProgressView.h */,
 				A71457151FB010B500EEC580 /* CYProgressView.m */,
+				A7136AC91FB19F1B0017B170 /* CYChartView.h */,
+				A7136ACA1FB19F1B0017B170 /* CYChartView.m */,
+				A7136ACC1FB1A2BE0017B170 /* CYChartImageView.h */,
+				A7136ACD1FB1A2BE0017B170 /* CYChartImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +771,7 @@
 				F1D3FF171FA9BAA200A1DED7 /* WPMSettingVC.m in Sources */,
 				F1D3FF111FA9BAA200A1DED7 /* WPMCalendarScrollView.m in Sources */,
 				F1D3FF0A1FA9BAA200A1DED7 /* NSDate+WPMCalendar.m in Sources */,
+				A7136ACE1FB1A2BE0017B170 /* CYChartImageView.m in Sources */,
 				F1D3FF081FA9BAA200A1DED7 /* WPMPushAlbumController.m in Sources */,
 				F1D3FF0B1FA9BAA200A1DED7 /* WPMAlbum.m in Sources */,
 				F1D3FF051FA9BAA200A1DED7 /* CollectionViewController.m in Sources */,
@@ -772,6 +783,7 @@
 				F1D3FF151FA9BAA200A1DED7 /* WPMCoffeeVC.m in Sources */,
 				F1D3FF141FA9BAA200A1DED7 /* WPMSingleWeekView.m in Sources */,
 				F1D3FF161FA9BAA200A1DED7 /* WPMHomeVC.m in Sources */,
+				A7136ACB1FB19F1C0017B170 /* CYChartView.m in Sources */,
 				F17790DF1FAAFB76008B2EDF /* SelectView.m in Sources */,
 				F1D3FF0F1FA9BAA200A1DED7 /* WPMCalenarWeekHeaderView.m in Sources */,
 				F1D3FE9B1FA9BA1400A1DED7 /* main.m in Sources */,
