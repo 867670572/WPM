@@ -32,6 +32,7 @@
 - (void)loadViewControllers{
     
     WPMHomeVC *HomeVC = [[WPMHomeVC alloc]init];
+    self.title = @"首页";
 //    CGFloat offset = 5.0;
 //    HomeVC.tabBarItem.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
 //    [HomeVC setCanShowNavBackItem:NO];
@@ -63,33 +64,34 @@
 
     item1.image = [[UIImage imageNamed:@"home icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    //拉伸item的图片
-    item1.imageInsets = UIEdgeInsetsMake(0, 0, -8, 0);
+    item1.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0);
 //    //调整item文字位置
 //    [item1 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item1.title = @"首页";
 
     item2.image = [[UIImage imageNamed:@"calendar icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.imageInsets = UIEdgeInsetsMake(0, 0, -15, 0);
+    item2.selectedImage = [[UIImage imageNamed:@"calendar icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.imageInsets = UIEdgeInsetsMake(15, 0, -15, 0);
 //    [item2 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item2.title = @"日记";
 
 
     item3.image = [[UIImage imageNamed:@"coffee icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.imageInsets = UIEdgeInsetsMake(0, 0, -8, 0);
+    item3.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0);
 //    [item3 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item3.title = @"咖啡";
 
     item4.image = [[UIImage imageNamed:@"setting icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item4.imageInsets = UIEdgeInsetsMake(0, 0, -10, 0);
+    item4.imageInsets = UIEdgeInsetsMake(10, 0, -10, 0);
 //    [item4 setTitlePositionAdjustment:UIOffsetMake(0, -5)];
 //    item4.title = @"设置";
 
 
-    //改变UITabBarItem字体颜色
-    //未选中颜色
-//    NSDictionary *normalItem = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14 weight:2.0f],NSFontAttributeName,[UIColor darkTextColor],NSForegroundColorAttributeName, nil];
-//    [[UITabBarItem appearance] setTitleTextAttributes:normalItem forState:UIControlStateNormal];
-    //选中颜色
+//    改变UITabBarItem字体颜色
+//    未选中颜色
+    NSDictionary *normalItem = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14 weight:2.0f],NSFontAttributeName,[UIColor darkTextColor],NSForegroundColorAttributeName, nil];
+    [[UITabBarItem appearance] setTitleTextAttributes:normalItem forState:UIControlStateNormal];
+//    选中颜色
     NSDictionary *selectedItem = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14 weight:2.0f],NSFontAttributeName,WPMMainColor,NSForegroundColorAttributeName, nil];
     [[UITabBarItem appearance] setTitleTextAttributes:selectedItem forState:UIControlStateSelected];
 

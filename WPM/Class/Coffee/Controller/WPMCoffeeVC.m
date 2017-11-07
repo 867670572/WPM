@@ -10,6 +10,7 @@
 #import "Masonry.h"
 #import "CYByteManager.h"
 #import "CDZPicker.h"
+#import "CYProgressView.h"
 
 @interface WPMCoffeeVC ()
 @property (nonatomic,strong) UIButton *oneCupButton;
@@ -21,6 +22,12 @@
 @property (nonatomic,strong) UIButton *stageButton;
 @property (nonatomic,strong) UIButton *openButton;
 @property (nonatomic,strong) UIButton *saveButton;
+@property (nonatomic,strong) UILabel *pressureSettingLabel;
+@property (nonatomic,strong) CYProgressView *preProgressView;
+@property (nonatomic,strong) UILabel *timeSettingLabel;
+@property (nonatomic,strong) CYProgressView *timeProgressView;
+@property (nonatomic,assign) float time;
+
 @end
 
 @implementation WPMCoffeeVC
@@ -29,6 +36,7 @@
     [super viewDidLoad];
     self.isOneCup = YES;
     [self setUI];
+    self.time = 0;
     
 }
 - (void)setUI{
@@ -74,7 +82,80 @@
     [stageImageView addSubview:self.openButton];
     [stageImageView addSubview:self.saveButton];
     
+    UIImageView *pressureBackgroundImageView = [[UIImageView alloc] init];
+    pressureBackgroundImageView.image = [UIImage imageNamed:@"bg2"];
+    pressureBackgroundImageView.userInteractionEnabled = YES;
+    [backgroudView addSubview:pressureBackgroundImageView];
     
+    UIImageView *preImageView = [[UIImageView alloc] init];
+    preImageView.image = [UIImage imageNamed:@"pressure icon"];
+    preImageView.userInteractionEnabled = YES;
+    [pressureBackgroundImageView addSubview:preImageView];
+    
+    UILabel *pLabel = [[UILabel alloc] init];
+    pLabel.text = @"Pressure";
+    pLabel.font = [UIFont systemFontOfSize:16.f weight:2];
+    pLabel.textColor = [UIColor whiteColor];
+    [pressureBackgroundImageView addSubview:pLabel];
+    
+    [pressureBackgroundImageView addSubview:self.pressureSettingLabel];
+    
+    UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [minusButton setImage:[UIImage imageNamed:@"minus icon"] forState:UIControlStateNormal];
+    [minusButton addTarget:self action:@selector(clickMinusButton:) forControlEvents:UIControlEventTouchUpInside];
+    [pressureBackgroundImageView addSubview:minusButton];
+    
+    UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [plusButton setImage:[UIImage imageNamed:@"plus icon"] forState:UIControlStateNormal];
+    [plusButton addTarget:self action:@selector(clickPlusButton:) forControlEvents:UIControlEventTouchUpInside];
+    [pressureBackgroundImageView addSubview:plusButton];
+    
+    UIImageView *progressImageView = [[UIImageView alloc] init];
+    progressImageView.image = [UIImage imageNamed:@"slider bg"];
+    progressImageView.userInteractionEnabled = YES;
+    [pressureBackgroundImageView addSubview:progressImageView];
+    
+    [progressImageView addSubview:self.preProgressView];
+    
+    
+    UIImageView *timeBackgroundImageView = [[UIImageView alloc] init];
+    timeBackgroundImageView.image = [UIImage imageNamed:@"bg2"];
+    timeBackgroundImageView.userInteractionEnabled = YES;
+    [backgroudView addSubview:timeBackgroundImageView];
+    
+    UIImageView *timeImageView = [[UIImageView alloc] init];
+    timeImageView.image = [UIImage imageNamed:@"time icon"];
+    timeImageView.userInteractionEnabled = YES;
+    [timeBackgroundImageView addSubview:timeImageView];
+    
+    UILabel *tLabel = [[UILabel alloc] init];
+    tLabel.text = @"Time";
+    tLabel.font = [UIFont systemFontOfSize:16.f weight:2];
+    tLabel.textColor = [UIColor whiteColor];
+    [timeBackgroundImageView addSubview:tLabel];
+    
+    [timeBackgroundImageView addSubview:self.timeSettingLabel];
+    
+    UIButton *tMinusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [tMinusButton setImage:[UIImage imageNamed:@"minus icon"] forState:UIControlStateNormal];
+    [tMinusButton addTarget:self action:@selector(clickTMinusButton:) forControlEvents:UIControlEventTouchUpInside];
+    [timeBackgroundImageView addSubview:tMinusButton];
+    
+    UIButton *tPlusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [tPlusButton setImage:[UIImage imageNamed:@"plus icon"] forState:UIControlStateNormal];
+    [tPlusButton addTarget:self action:@selector(clickTPlusButton:) forControlEvents:UIControlEventTouchUpInside];
+    [timeBackgroundImageView addSubview:tPlusButton];
+    
+    UIImageView *timeProgressImageView = [[UIImageView alloc] init];
+    timeProgressImageView.image = [UIImage imageNamed:@"slider bg"];
+    timeProgressImageView.userInteractionEnabled = YES;
+    [timeBackgroundImageView addSubview:timeProgressImageView];
+    
+    [timeProgressImageView addSubview:self.timeProgressView];
+    
+    
+    
+#pragma mark - Masonry
     
     __weak typeof(self) weakSelf = self;
     [oneCupLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -157,8 +238,92 @@
         make.right.mas_equalTo(stageImageView).offset(-10);
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
-
     
+    
+    [pressureBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(stageImageView);
+        make.top.mas_equalTo(stageImageView.mas_bottom).offset(10);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [preImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pressureBackgroundImageView).offset(10);
+        make.left.mas_equalTo(pressureBackgroundImageView).offset(10);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    [pLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(preImageView.mas_right).offset(10);
+        make.centerY.mas_equalTo(preImageView);
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+    }];
+    
+    [self.pressureSettingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(pLabel.mas_right).offset(10);
+        make.centerY.mas_equalTo(preImageView);
+        make.size.mas_equalTo(CGSizeMake(60, 30));
+    }];
+    
+    [minusButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(preImageView);
+        make.bottom.mas_equalTo(pressureBackgroundImageView).offset(-10);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+
+    [plusButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(pressureBackgroundImageView).offset(-10);
+        make.centerY.mas_equalTo(minusButton);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    [progressImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(minusButton.mas_right).offset(10);
+        make.right.mas_equalTo(plusButton.mas_left).offset(-10);
+        make.centerY.mas_equalTo(minusButton);
+    }];
+    
+    
+    [timeBackgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(stageImageView);
+        make.top.mas_equalTo(pressureBackgroundImageView.mas_bottom).offset(10);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [timeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(timeBackgroundImageView).offset(10);
+        make.left.mas_equalTo(timeBackgroundImageView).offset(10);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    [tLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(timeImageView.mas_right).offset(10);
+        make.centerY.mas_equalTo(timeImageView);
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+    }];
+    
+    [self.timeSettingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(tLabel.mas_right).offset(10);
+        make.centerY.mas_equalTo(timeImageView);
+        make.size.mas_equalTo(CGSizeMake(60, 30));
+    }];
+    
+    [tMinusButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(timeImageView);
+        make.bottom.mas_equalTo(timeBackgroundImageView).offset(-10);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    [tPlusButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(timeBackgroundImageView).offset(-10);
+        make.centerY.mas_equalTo(tMinusButton);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
+    
+    [timeProgressImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(tMinusButton.mas_right).offset(10);
+        make.right.mas_equalTo(tPlusButton.mas_left).offset(-10);
+        make.centerY.mas_equalTo(tMinusButton);
+    }];
 }
 
 #pragma mark - button click method
@@ -196,6 +361,35 @@
 
 - (void)clickSaveButton:(UIButton *)button{
     NSLog(@"点击 save");
+}
+
+- (void)clickMinusButton:(UIButton *)button{
+    NSLog(@"点击 munis");
+}
+- (void)clickPlusButton:(UIButton *)button{
+    NSLog(@"点击 plus");
+    self.preProgressView.progress = 1.0;
+}
+
+- (void)clickTMinusButton:(UIButton *)button{
+    NSLog(@"点击 time munis");
+    if (self.time > 0) {
+        self.time -= 1;
+        self.timeProgressView.progress = self.time/10;
+        self.timeSettingLabel.text = [NSString stringWithFormat:@"%1.fs",self.time];
+
+    }
+    
+}
+- (void)clickTPlusButton:(UIButton *)button{
+    NSLog(@"点击 time plus");
+    if (self.time < 10 ) {
+        self.time += 1;
+        self.timeProgressView.progress = self.time/10;
+        self.timeSettingLabel.text = [NSString stringWithFormat:@"%.fs",self.time];
+        NSLog(@"%.1f",self.time);
+    }
+    
 }
 #pragma mark - lazyload
 
@@ -288,5 +482,45 @@
         [_saveButton addTarget:self action:@selector(clickSaveButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _saveButton;
+}
+-(UILabel *)pressureSettingLabel{
+    if (!_pressureSettingLabel) {
+        _pressureSettingLabel = [[UILabel alloc] init];
+        _pressureSettingLabel.backgroundColor = [UIColor whiteColor];
+        [_pressureSettingLabel.layer setBorderWidth:2.0];
+        [_pressureSettingLabel.layer setBorderColor:[UIColor redColor].CGColor];
+        _pressureSettingLabel.text = @"LV3";
+        _pressureSettingLabel.font = [UIFont systemFontOfSize:18.f weight:2];
+        _pressureSettingLabel.textAlignment = NSTextAlignmentCenter;
+        _pressureSettingLabel.textColor = [UIColor blackColor];
+    }
+    return _pressureSettingLabel;
+}
+-(CYProgressView *)preProgressView{
+    if (!_preProgressView) {
+        _preProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-148, 15)];
+        _preProgressView.progress = 0.375;
+    }
+    return _preProgressView;
+}
+-(UILabel *)timeSettingLabel{
+    if (!_timeSettingLabel) {
+        _timeSettingLabel = [[UILabel alloc] init];
+        _timeSettingLabel.backgroundColor = [UIColor whiteColor];
+        [_timeSettingLabel.layer setBorderWidth:2.0];
+        [_timeSettingLabel.layer setBorderColor:[UIColor redColor].CGColor];
+        _timeSettingLabel.text = @"3s";
+        _timeSettingLabel.font = [UIFont systemFontOfSize:18.f weight:2];
+        _timeSettingLabel.textAlignment = NSTextAlignmentCenter;
+        _timeSettingLabel.textColor = [UIColor blackColor];
+    }
+    return _timeSettingLabel;
+}
+-(CYProgressView *)timeProgressView{
+    if (!_timeProgressView) {
+        _timeProgressView = [[CYProgressView alloc] initWithFrame:CGRectMake(4, 2.5, SCREEN_WIDTH-148, 15)];
+        _timeProgressView.progress = 0.375;
+    }
+    return _timeProgressView;
 }
 @end

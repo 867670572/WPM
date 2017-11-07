@@ -18,6 +18,7 @@ static const int toolBarHeight = 44;
 @property (nonatomic,strong) NSString *selectedString;
 @property (nonatomic,  copy) MTCancelBlock cancelBlock;
 @property (nonatomic,  copy) MTConfirmBlock confirmBlock;
+
 @end
 
 @implementation CDZPicker
@@ -35,7 +36,9 @@ static const int toolBarHeight = 44;
     //未滑动默认为第一个数值
     pickerView.selectedString = array[0];
     [pickerView initView];
-    [view addSubview:pickerView];
+//    [view addSubview:pickerView];
+    UIApplication *app = [UIApplication sharedApplication];
+    [app.keyWindow addSubview:pickerView];
 }
 
 

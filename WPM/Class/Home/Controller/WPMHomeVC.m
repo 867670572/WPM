@@ -25,11 +25,13 @@
 
 - (void)setupLiftLogo{
     UIButton *logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    logoBtn.frame = CGRectMake(0, 0, 15, 26);
+    
+    logoBtn.frame = CGRectMake(0, 20, 150, 44);
     [logoBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:logoBtn];
+//    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:logoBtn];
     [logoBtn setUserInteractionEnabled:NO];
-    self.navigationItem.leftBarButtonItem = backItem;
+//    self.navigationItem.leftBarButtonItem = backItem;
+    [self.view addSubview:logoBtn];
 }
 
 - (void)setupUI{

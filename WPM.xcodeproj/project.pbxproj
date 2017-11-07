@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC2A1817A4F9451412D872E /* libPods-WPM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 693A1BFC54AE8F0A01676237 /* libPods-WPM.a */; };
+		A71457171FB015EC00EEC580 /* CYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71457151FB010B500EEC580 /* CYProgressView.m */; };
 		A7E922561FAE445C00851FF0 /* CDZPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A70FA6C41FAE2F920054936B /* CDZPicker.m */; };
 		F17790DF1FAAFB76008B2EDF /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790DE1FAAFB76008B2EDF /* SelectView.m */; };
 		F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F17790E11FAB3754008B2EDF /* WPMSettingPushSettingVC.m */; };
@@ -65,6 +66,8 @@
 		693A1BFC54AE8F0A01676237 /* libPods-WPM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70FA6C31FAE2F920054936B /* CDZPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDZPicker.h; sourceTree = "<group>"; };
 		A70FA6C41FAE2F920054936B /* CDZPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDZPicker.m; sourceTree = "<group>"; };
+		A71457151FB010B500EEC580 /* CYProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYProgressView.m; sourceTree = "<group>"; };
+		A71457161FB010B500EEC580 /* CYProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYProgressView.h; sourceTree = "<group>"; };
 		A71755601FAC3221005B822A /* BabyBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
 		A71755611FAC3221005B822A /* BabyBluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyBluetooth.m; sourceTree = "<group>"; };
 		A71755621FAC3221005B822A /* BabyCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyCallback.h; sourceTree = "<group>"; };
@@ -194,13 +197,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A70FA6C11FAE2F690054936B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		A70FA6C21FAE2F920054936B /* CDZPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +204,15 @@
 				A70FA6C41FAE2F920054936B /* CDZPicker.m */,
 			);
 			path = CDZPicker;
+			sourceTree = "<group>";
+		};
+		A71457141FB0109300EEC580 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A71457161FB010B500EEC580 /* CYProgressView.h */,
+				A71457151FB010B500EEC580 /* CYProgressView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A71755301FAC31BD005B822A /* Lib */ = {
@@ -414,7 +419,7 @@
 			children = (
 				F1D3FEE31FA9BAA100A1DED7 /* Controller */,
 				F1D3FEE61FA9BAA100A1DED7 /* Model */,
-				A70FA6C11FAE2F690054936B /* View */,
+				A71457141FB0109300EEC580 /* View */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -748,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71457171FB015EC00EEC580 /* CYProgressView.m in Sources */,
 				A7E922561FAE445C00851FF0 /* CDZPicker.m in Sources */,
 				F1D3FF191FA9BAA200A1DED7 /* AppDelegate.m in Sources */,
 				F17790E21FAB3754008B2EDF /* WPMSettingPushSettingVC.m in Sources */,
